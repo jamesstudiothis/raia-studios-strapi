@@ -42,6 +42,11 @@
       "relation": "oneToMany",
       "target": "api::capability.capability"
     },
+    "Tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
     "SEO": {
       "displayName": "SEO Information",
       "type": "component",

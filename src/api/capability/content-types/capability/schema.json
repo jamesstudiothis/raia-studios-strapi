@@ -4,7 +4,8 @@
   "info": {
     "singularName": "capability",
     "pluralName": "capabilities",
-    "displayName": "Capability"
+    "displayName": "Capability",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -20,6 +21,12 @@
       "type": "uid",
       "targetField": "Name",
       "required": true
+    },
+    "PrimaryText": {
+      "type": "text"
+    },
+    "VideoURL": {
+      "type": "string"
     }
   }
 }

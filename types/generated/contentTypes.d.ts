@@ -833,6 +833,7 @@ export interface ApiCapabilityCapability extends Schema.CollectionType {
     singularName: 'capability';
     pluralName: 'capabilities';
     displayName: 'Capability';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -841,6 +842,8 @@ export interface ApiCapabilityCapability extends Schema.CollectionType {
     Name: Attribute.String & Attribute.Required & Attribute.Unique;
     Slug: Attribute.UID<'api::capability.capability', 'Name'> &
       Attribute.Required;
+    PrimaryText: Attribute.Text;
+    VideoURL: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -964,6 +967,29 @@ export interface ApiServicesServices extends Schema.SingleType {
   };
 }
 
+export interface ApiTagTag extends Schema.CollectionType {
+  collectionName: 'tags';
+  info: {
+    singularName: 'tag';
+    pluralName: 'tags';
+    displayName: 'Tag';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Slug: Attribute.UID<'api::tag.tag', 'Title'> & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiWorkWork extends Schema.CollectionType {
   collectionName: 'works';
   info: {
@@ -990,6 +1016,7 @@ export interface ApiWorkWork extends Schema.CollectionType {
       'oneToMany',
       'api::capability.capability'
     >;
+    Tags: Attribute.Relation<'api::work.work', 'oneToMany', 'api::tag.tag'>;
     SEO: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1057,6 +1084,7 @@ declare module '@strapi/types' {
       'api::contact.contact': ApiContactContact;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::services.services': ApiServicesServices;
+      'api::tag.tag': ApiTagTag;
       'api::work.work': ApiWorkWork;
       'api::work-page.work-page': ApiWorkPageWorkPage;
     }
