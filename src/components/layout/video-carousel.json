@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_layout_video_carousels",
+  "info": {
+    "displayName": "Video Carousel",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "Video": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.video"
+    }
+  }
+}

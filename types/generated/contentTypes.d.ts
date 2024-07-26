@@ -788,6 +788,253 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutUsAboutUs extends Schema.SingleType {
+  collectionName: 'about_uses';
+  info: {
+    singularName: 'about-us';
+    pluralName: 'about-uses';
+    displayName: 'About Us';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::about-us.about-us', 'Title'> & Attribute.Required;
+    Hero: Attribute.Component<'layout.hero'>;
+    AboutUsText: Attribute.Component<'layout.body-text'>;
+    VideoCarousel: Attribute.Component<'layout.video-carousel'>;
+    OurApproachHeadline: Attribute.Component<'layout.headline-text'>;
+    OurApproachText: Attribute.Component<'layout.body-text'>;
+    Team: Attribute.Component<'layout.team'>;
+    SEO: Attribute.Component<'seo.seo-information'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-us.about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-us.about-us',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCapabilityCapability extends Schema.CollectionType {
+  collectionName: 'capabilities';
+  info: {
+    singularName: 'capability';
+    pluralName: 'capabilities';
+    displayName: 'Capability';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Name: Attribute.String & Attribute.Required & Attribute.Unique;
+    Slug: Attribute.UID<'api::capability.capability', 'Name'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::capability.capability',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::capability.capability',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiContactContact extends Schema.SingleType {
+  collectionName: 'contacts';
+  info: {
+    singularName: 'contact';
+    pluralName: 'contacts';
+    displayName: 'Contact';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    slug: Attribute.UID<'api::contact.contact', 'Title'> & Attribute.Required;
+    Contact: Attribute.Component<'layout.contact'>;
+    Hero: Attribute.Component<'layout.hero'>;
+    SEO: Attribute.Component<'seo.seo-information', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomepageHomepage extends Schema.SingleType {
+  collectionName: 'homepages';
+  info: {
+    singularName: 'homepage';
+    pluralName: 'homepages';
+    displayName: 'Homepage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Video: Attribute.Component<'layout.video'>;
+    seo: Attribute.Component<'seo.seo-information'>;
+    headlineText: Attribute.Component<'layout.headline-text'>;
+    bodyText: Attribute.Component<'layout.body-text'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::homepage.homepage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::homepage.homepage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiServicesServices extends Schema.SingleType {
+  collectionName: 'servicess';
+  info: {
+    singularName: 'services';
+    pluralName: 'servicess';
+    displayName: 'Services';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    slug: Attribute.UID<'api::services.services', 'Title'>;
+    Hero: Attribute.Component<'layout.hero'>;
+    Video: Attribute.Component<'layout.video'>;
+    AboutUsHeadline: Attribute.Component<'layout.headline-text'>;
+    AboutUsText: Attribute.Component<'layout.body-text'>;
+    OurApproachText: Attribute.Component<'layout.body-text'>;
+    SEO: Attribute.Component<'seo.seo-information'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::services.services',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::services.services',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWorkWork extends Schema.CollectionType {
+  collectionName: 'works';
+  info: {
+    singularName: 'work';
+    pluralName: 'works';
+    displayName: 'Work';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    SEO: Attribute.Component<'seo.seo-information'>;
+    slug: Attribute.UID<'api::work.work', 'Title'> & Attribute.Required;
+    thumbnail: Attribute.Media<'images'>;
+    workURL: Attribute.String;
+    Creator: Attribute.String;
+    capabilities: Attribute.Relation<
+      'api::work.work',
+      'oneToMany',
+      'api::capability.capability'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::work.work', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::work.work', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWorkPageWorkPage extends Schema.SingleType {
+  collectionName: 'work_pages';
+  info: {
+    singularName: 'work-page';
+    pluralName: 'work-pages';
+    displayName: 'Work Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    seo: Attribute.Component<'seo.seo-information'>;
+    Title: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::work-page.work-page', 'Title'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::work-page.work-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::work-page.work-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -806,6 +1053,13 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::capability.capability': ApiCapabilityCapability;
+      'api::contact.contact': ApiContactContact;
+      'api::homepage.homepage': ApiHomepageHomepage;
+      'api::services.services': ApiServicesServices;
+      'api::work.work': ApiWorkWork;
+      'api::work-page.work-page': ApiWorkPageWorkPage;
     }
   }
 }

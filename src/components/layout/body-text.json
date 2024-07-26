@@ -7,19 +7,19 @@
   },
   "options": {},
   "attributes": {
+    "dividerText": {
+      "type": "string"
+    },
     "headingText": {
+      "type": "text"
+    },
+    "PrimaryText": {
       "type": "text"
     },
     "Link": {
       "type": "component",
       "repeatable": false,
       "component": "layout.link"
-    },
-    "PrimaryText": {
-      "type": "text"
-    },
-    "dividerText": {
-      "type": "string"
     }
   }
 }

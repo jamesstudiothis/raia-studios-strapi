@@ -7,11 +7,11 @@
   },
   "options": {},
   "attributes": {
-    "Text": {
-      "type": "text"
-    },
     "dividerText": {
       "type": "string"
+    },
+    "Text": {
+      "type": "text"
     }
   }
 }

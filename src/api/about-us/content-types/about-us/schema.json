@@ -26,6 +26,21 @@
       "repeatable": false,
       "component": "layout.hero"
     },
+    "AboutUsText": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.body-text"
+    },
+    "VideoCarousel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.video-carousel"
+    },
+    "OurApproachHeadline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.headline-text"
+    },
     "OurApproachText": {
       "type": "component",
       "repeatable": false,
@@ -36,15 +51,10 @@
       "repeatable": false,
       "component": "layout.team"
     },
-    "AboutUsText": {
+    "SEO": {
       "type": "component",
       "repeatable": false,
-      "component": "layout.body-text"
-    },
-    "OurApproachHeadline": {
-      "type": "component",
-      "repeatable": false,
-      "component": "layout.headline-text"
+      "component": "seo.seo-information"
     }
   }
 }

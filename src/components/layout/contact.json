@@ -13,17 +13,17 @@
     "PrimaryText": {
       "type": "text"
     },
-    "SocialLinks": {
-      "type": "component",
-      "repeatable": true,
-      "component": "layout.link"
-    },
     "PrimaryContact": {
       "type": "component",
       "repeatable": false,
       "component": "layout.link"
     },
     "SecondaryContact": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.link"
+    },
+    "SocialLinks": {
       "type": "component",
       "repeatable": true,
       "component": "layout.link"
