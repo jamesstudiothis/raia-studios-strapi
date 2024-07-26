@@ -12,11 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "seo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "seo.seo-information"
-    },
     "Title": {
       "type": "string",
       "required": true
@@ -24,6 +19,11 @@
     "slug": {
       "type": "uid",
       "targetField": "Title"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-information"
     }
   }
 }

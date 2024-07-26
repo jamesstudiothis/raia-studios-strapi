@@ -906,9 +906,8 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
   };
   attributes: {
     Video: Attribute.Component<'layout.video'>;
-    seo: Attribute.Component<'seo.seo-information'>;
     headlineText: Attribute.Component<'layout.headline-text'>;
-    bodyText: Attribute.Component<'layout.body-text'>;
+    seo: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -982,16 +981,16 @@ export interface ApiWorkWork extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
-    SEO: Attribute.Component<'seo.seo-information'>;
     slug: Attribute.UID<'api::work.work', 'Title'> & Attribute.Required;
+    Creator: Attribute.String;
     thumbnail: Attribute.Media<'images'>;
     workURL: Attribute.String;
-    Creator: Attribute.String;
     capabilities: Attribute.Relation<
       'api::work.work',
       'oneToMany',
       'api::capability.capability'
     >;
+    SEO: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1014,9 +1013,9 @@ export interface ApiWorkPageWorkPage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    seo: Attribute.Component<'seo.seo-information'>;
     Title: Attribute.String & Attribute.Required;
     slug: Attribute.UID<'api::work-page.work-page', 'Title'>;
+    seo: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

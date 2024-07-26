@@ -18,20 +18,15 @@
       "repeatable": false,
       "component": "layout.video"
     },
-    "seo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "seo.seo-information"
-    },
     "headlineText": {
       "type": "component",
       "repeatable": false,
       "component": "layout.headline-text"
     },
-    "bodyText": {
+    "seo": {
       "type": "component",
       "repeatable": false,
-      "component": "layout.body-text"
+      "component": "seo.seo-information"
     }
   }
 }
