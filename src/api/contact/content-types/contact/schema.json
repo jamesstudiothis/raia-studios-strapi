@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title",
+      "required": true
+    },
+    "Contact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.contact"
+    },
+    "Hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.hero"
+    },
+    "SEO": {
+      "type": "component",
+      "repeatable": true,
+      "component": "seo.seo-information"
+    }
+  }
+}

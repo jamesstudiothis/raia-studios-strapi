@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "work_pages",
+  "info": {
+    "singularName": "work-page",
+    "pluralName": "work-pages",
+    "displayName": "Work Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-information"
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
+    }
+  }
+}

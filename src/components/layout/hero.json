@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_layout_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "heroText": {
+      "type": "text"
+    }
+  }
+}

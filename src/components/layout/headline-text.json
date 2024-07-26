@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_headline_text_headline_texts",
+  "info": {
+    "displayName": "Headline Text",
+    "icon": "bold",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "text"
+    },
+    "dividerText": {
+      "type": "string"
+    }
+  }
+}

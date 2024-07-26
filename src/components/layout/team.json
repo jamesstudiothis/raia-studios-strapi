@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_layout_teams",
+  "info": {
+    "displayName": "Team",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "DividerText": {
+      "type": "string"
+    },
+    "Headline": {
+      "type": "string"
+    },
+    "TitleText": {
+      "type": "string"
+    },
+    "Team": {
+      "displayName": "Team Members",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.team-members"
+    }
+  }
+}

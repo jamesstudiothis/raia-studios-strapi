@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_layout_contacts",
+  "info": {
+    "displayName": "Contact",
+    "icon": "phone",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "DividerText": {
+      "type": "string"
+    },
+    "PrimaryText": {
+      "type": "text"
+    },
+    "SocialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.link"
+    },
+    "PrimaryContact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.link"
+    },
+    "SecondaryContact": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.link"
+    }
+  }
+}
