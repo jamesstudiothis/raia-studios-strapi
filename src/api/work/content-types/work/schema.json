@@ -25,6 +25,13 @@
     "Creator": {
       "type": "string"
     },
+    "Year": {
+      "type": "string"
+    },
+    "workURL": {
+      "type": "string",
+      "required": false
+    },
     "thumbnail": {
       "type": "media",
       "multiple": false,
@@ -33,9 +40,20 @@
         "images"
       ]
     },
-    "workURL": {
-      "type": "string",
-      "required": false
+    "ProjectInfo": {
+      "displayName": "Project Info",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.project-info"
+    },
+    "About": {
+      "type": "text"
+    },
+    "Credit": {
+      "displayName": "Credits",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.credits"
     },
     "capabilities": {
       "type": "relation",

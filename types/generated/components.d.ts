@@ -62,6 +62,18 @@ export interface LayoutTeamMembers extends Schema.Component {
   };
 }
 
+export interface LayoutProjectInfo extends Schema.Component {
+  collectionName: 'components_layout_project_infos';
+  info: {
+    displayName: 'Project Info';
+    icon: 'star';
+    description: '';
+  };
+  attributes: {
+    ProjectInfo: Attribute.String;
+  };
+}
+
 export interface LayoutLink extends Schema.Component {
   collectionName: 'components_layout_links';
   info: {
@@ -95,6 +107,18 @@ export interface LayoutHeadlineText extends Schema.Component {
   attributes: {
     dividerText: Attribute.String;
     Text: Attribute.Text;
+  };
+}
+
+export interface LayoutCredits extends Schema.Component {
+  collectionName: 'components_layout_credits';
+  info: {
+    displayName: 'Credits';
+    icon: 'bold';
+    description: '';
+  };
+  attributes: {
+    Credit: Attribute.String;
   };
 }
 
@@ -137,9 +161,11 @@ declare module '@strapi/types' {
       'layout.video-carousel': LayoutVideoCarousel;
       'layout.team': LayoutTeam;
       'layout.team-members': LayoutTeamMembers;
+      'layout.project-info': LayoutProjectInfo;
       'layout.link': LayoutLink;
       'layout.hero': LayoutHero;
       'layout.headline-text': LayoutHeadlineText;
+      'layout.credits': LayoutCredits;
       'layout.contact': LayoutContact;
       'layout.body-text': LayoutBodyText;
     }

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_layout_credits",
+  "info": {
+    "displayName": "Credits",
+    "icon": "bold",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Credit": {
+      "type": "string"
+    }
+  }
+}
