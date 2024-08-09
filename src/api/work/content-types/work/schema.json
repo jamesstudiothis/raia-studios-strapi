@@ -40,12 +40,6 @@
         "images"
       ]
     },
-    "ProjectInfo": {
-      "displayName": "Project Info",
-      "type": "component",
-      "repeatable": true,
-      "component": "layout.project-info"
-    },
     "About": {
       "type": "text"
     },

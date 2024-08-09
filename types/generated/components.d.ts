@@ -62,18 +62,6 @@ export interface LayoutTeamMembers extends Schema.Component {
   };
 }
 
-export interface LayoutProjectInfo extends Schema.Component {
-  collectionName: 'components_layout_project_infos';
-  info: {
-    displayName: 'Project Info';
-    icon: 'star';
-    description: '';
-  };
-  attributes: {
-    ProjectInfo: Attribute.String;
-  };
-}
-
 export interface LayoutLink extends Schema.Component {
   collectionName: 'components_layout_links';
   info: {
@@ -161,7 +149,6 @@ declare module '@strapi/types' {
       'layout.video-carousel': LayoutVideoCarousel;
       'layout.team': LayoutTeam;
       'layout.team-members': LayoutTeamMembers;
-      'layout.project-info': LayoutProjectInfo;
       'layout.link': LayoutLink;
       'layout.hero': LayoutHero;
       'layout.headline-text': LayoutHeadlineText;

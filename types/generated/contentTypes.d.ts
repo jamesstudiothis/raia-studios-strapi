@@ -1012,7 +1012,6 @@ export interface ApiWorkWork extends Schema.CollectionType {
     Year: Attribute.String;
     workURL: Attribute.String;
     thumbnail: Attribute.Media<'images'>;
-    ProjectInfo: Attribute.Component<'layout.project-info', true>;
     About: Attribute.Text;
     Credit: Attribute.Component<'layout.credits', true>;
     capabilities: Attribute.Relation<
