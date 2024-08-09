@@ -1010,8 +1010,9 @@ export interface ApiWorkWork extends Schema.CollectionType {
     slug: Attribute.UID<'api::work.work', 'Title'> & Attribute.Required;
     Creator: Attribute.String;
     Year: Attribute.String;
-    workURL: Attribute.String;
     thumbnail: Attribute.Media<'images'>;
+    ThumbnailURL: Attribute.String;
+    WorkURL: Attribute.Component<'layout.video'>;
     About: Attribute.Text;
     Credit: Attribute.Component<'layout.credits', true>;
     capabilities: Attribute.Relation<

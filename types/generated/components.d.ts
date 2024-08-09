@@ -21,6 +21,7 @@ export interface LayoutVideo extends Schema.Component {
   };
   attributes: {
     videoURL: Attribute.String & Attribute.Required;
+    PlayState: Attribute.Enumeration<['Autoplay', 'On Hover', 'Not Play']>;
   };
 }
 

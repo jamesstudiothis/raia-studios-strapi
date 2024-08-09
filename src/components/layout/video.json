@@ -10,6 +10,14 @@
     "videoURL": {
       "type": "string",
       "required": true
+    },
+    "PlayState": {
+      "type": "enumeration",
+      "enum": [
+        "Autoplay",
+        "On Hover",
+        "Not Play"
+      ]
     }
   }
 }
