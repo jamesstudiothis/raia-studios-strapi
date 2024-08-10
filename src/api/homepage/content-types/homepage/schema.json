@@ -23,6 +23,11 @@
       "type": "component",
       "repeatable": false,
       "component": "seo.seo-information"
+    },
+    "Slide": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.slider-video"
     }
   }
 }

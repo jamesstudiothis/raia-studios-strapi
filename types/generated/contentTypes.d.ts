@@ -912,6 +912,7 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
       ['homepage-slider.work-item', 'homepage-slider.video']
     >;
     seo: Attribute.Component<'seo.seo-information'>;
+    Slide: Attribute.Component<'layout.slider-video', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

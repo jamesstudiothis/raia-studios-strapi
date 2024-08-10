@@ -63,6 +63,21 @@ export interface LayoutTeamMembers extends Schema.Component {
   };
 }
 
+export interface LayoutSliderVideo extends Schema.Component {
+  collectionName: 'components_layout_slider_videos';
+  info: {
+    displayName: 'Slider Video';
+    icon: 'apps';
+  };
+  attributes: {
+    Title: Attribute.String;
+    SecondaryTitle: Attribute.String;
+    URL: Attribute.String;
+    Thumbnail: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Video: Attribute.Component<'layout.video'>;
+  };
+}
+
 export interface LayoutLink extends Schema.Component {
   collectionName: 'components_layout_links';
   info: {
@@ -194,6 +209,7 @@ declare module '@strapi/types' {
       'layout.video-carousel': LayoutVideoCarousel;
       'layout.team': LayoutTeam;
       'layout.team-members': LayoutTeamMembers;
+      'layout.slider-video': LayoutSliderVideo;
       'layout.link': LayoutLink;
       'layout.hero': LayoutHero;
       'layout.headline-text': LayoutHeadlineText;

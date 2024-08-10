@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_layout_slider_videos",
+  "info": {
+    "displayName": "Slider Video",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "SecondaryTitle": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "Thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.video"
+    }
+  }
+}
