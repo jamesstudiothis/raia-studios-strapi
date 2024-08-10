@@ -2,11 +2,12 @@
   "collectionName": "components_layout_capabilities",
   "info": {
     "displayName": "Capabilities",
-    "icon": "monitor"
+    "icon": "monitor",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "capabilities": {
+    "Capability": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::capability.capability"

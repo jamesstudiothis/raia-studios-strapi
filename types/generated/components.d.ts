@@ -132,9 +132,10 @@ export interface LayoutCapabilities extends Schema.Component {
   info: {
     displayName: 'Capabilities';
     icon: 'monitor';
+    description: '';
   };
   attributes: {
-    capabilities: Attribute.Relation<
+    Capability: Attribute.Relation<
       'layout.capabilities',
       'oneToMany',
       'api::capability.capability'
