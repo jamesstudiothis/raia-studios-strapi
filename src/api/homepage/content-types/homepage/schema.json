@@ -12,16 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Video": {
-      "displayName": "Video",
-      "type": "component",
-      "repeatable": false,
-      "component": "layout.video"
-    },
-    "headlineText": {
-      "type": "component",
-      "repeatable": false,
-      "component": "layout.headline-text"
+    "Slider": {
+      "type": "dynamiczone",
+      "components": [
+        "homepage-slider.work-item",
+        "homepage-slider.video"
+      ]
     },
     "seo": {
       "type": "component",

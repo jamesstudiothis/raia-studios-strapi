@@ -127,6 +127,21 @@ export interface LayoutContact extends Schema.Component {
   };
 }
 
+export interface LayoutCapabilities extends Schema.Component {
+  collectionName: 'components_layout_capabilities';
+  info: {
+    displayName: 'Capabilities';
+    icon: 'monitor';
+  };
+  attributes: {
+    capabilities: Attribute.Relation<
+      'layout.capabilities',
+      'oneToMany',
+      'api::capability.capability'
+    >;
+  };
+}
+
 export interface LayoutBodyText extends Schema.Component {
   collectionName: 'components_body_text_body_texts';
   info: {
@@ -139,6 +154,34 @@ export interface LayoutBodyText extends Schema.Component {
     headingText: Attribute.Text;
     PrimaryText: Attribute.Text;
     Link: Attribute.Component<'layout.link'>;
+  };
+}
+
+export interface HomepageSliderWorkItem extends Schema.Component {
+  collectionName: 'components_homepage_slider_work_items';
+  info: {
+    displayName: 'Work Item';
+    icon: 'play';
+  };
+  attributes: {
+    work: Attribute.Relation<
+      'homepage-slider.work-item',
+      'oneToOne',
+      'api::work.work'
+    >;
+  };
+}
+
+export interface HomepageSliderVideo extends Schema.Component {
+  collectionName: 'components_homepage_slider_videos';
+  info: {
+    displayName: 'Video';
+    description: '';
+  };
+  attributes: {
+    Name: Attribute.String;
+    URL: Attribute.String;
+    Video: Attribute.Component<'layout.video'>;
   };
 }
 
@@ -155,7 +198,10 @@ declare module '@strapi/types' {
       'layout.headline-text': LayoutHeadlineText;
       'layout.credits': LayoutCredits;
       'layout.contact': LayoutContact;
+      'layout.capabilities': LayoutCapabilities;
       'layout.body-text': LayoutBodyText;
+      'homepage-slider.work-item': HomepageSliderWorkItem;
+      'homepage-slider.video': HomepageSliderVideo;
     }
   }
 }

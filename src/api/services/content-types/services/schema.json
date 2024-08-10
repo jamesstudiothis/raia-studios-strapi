@@ -39,6 +39,11 @@
       "repeatable": false,
       "component": "layout.body-text"
     },
+    "Capabilities": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.capabilities"
+    },
     "OurApproachText": {
       "type": "component",
       "repeatable": false,

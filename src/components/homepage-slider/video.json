@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_homepage_slider_videos",
+  "info": {
+    "displayName": "Video",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "Video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.video"
+    }
+  }
+}

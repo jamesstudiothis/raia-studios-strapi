@@ -908,8 +908,9 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    Video: Attribute.Component<'layout.video'>;
-    headlineText: Attribute.Component<'layout.headline-text'>;
+    Slider: Attribute.DynamicZone<
+      ['homepage-slider.work-item', 'homepage-slider.video']
+    >;
     seo: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -947,6 +948,7 @@ export interface ApiServicesServices extends Schema.SingleType {
     Video: Attribute.Component<'layout.video'>;
     AboutUsHeadline: Attribute.Component<'layout.headline-text'>;
     AboutUsText: Attribute.Component<'layout.body-text'>;
+    Capabilities: Attribute.Component<'layout.capabilities'>;
     OurApproachText: Attribute.Component<'layout.body-text'>;
     SEO: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
