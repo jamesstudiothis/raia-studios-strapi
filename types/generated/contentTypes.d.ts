@@ -908,11 +908,8 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    Slider: Attribute.DynamicZone<
-      ['homepage-slider.work-item', 'homepage-slider.video']
-    >;
+    Slider: Attribute.Component<'layout.slider-video', true>;
     seo: Attribute.Component<'seo.seo-information'>;
-    Slide: Attribute.Component<'layout.slider-video', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -963,6 +960,36 @@ export interface ApiServicesServices extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::services.services',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSiteOptionSiteOption extends Schema.SingleType {
+  collectionName: 'site_options';
+  info: {
+    singularName: 'site-option';
+    pluralName: 'site-options';
+    displayName: 'Site Option';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    MenuNavigation: Attribute.Component<'layout.link', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::site-option.site-option',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::site-option.site-option',
       'oneToOne',
       'admin::user'
     > &
@@ -1091,6 +1118,7 @@ declare module '@strapi/types' {
       'api::contact.contact': ApiContactContact;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::services.services': ApiServicesServices;
+      'api::site-option.site-option': ApiSiteOptionSiteOption;
       'api::tag.tag': ApiTagTag;
       'api::work.work': ApiWorkWork;
       'api::work-page.work-page': ApiWorkPageWorkPage;

@@ -13,21 +13,14 @@
   "pluginOptions": {},
   "attributes": {
     "Slider": {
-      "type": "dynamiczone",
-      "components": [
-        "homepage-slider.work-item",
-        "homepage-slider.video"
-      ]
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.slider-video"
     },
     "seo": {
       "type": "component",
       "repeatable": false,
       "component": "seo.seo-information"
-    },
-    "Slide": {
-      "type": "component",
-      "repeatable": true,
-      "component": "layout.slider-video"
     }
   }
 }
