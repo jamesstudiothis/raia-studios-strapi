@@ -972,13 +972,16 @@ export interface ApiSiteOptionSiteOption extends Schema.SingleType {
   info: {
     singularName: 'site-option';
     pluralName: 'site-options';
-    displayName: 'Site Option';
+    displayName: 'Site Options';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     MenuNavigation: Attribute.Component<'layout.link', true>;
+    FooterNavigation: Attribute.Component<'layout.link', true>;
+    DefaultSEO: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
