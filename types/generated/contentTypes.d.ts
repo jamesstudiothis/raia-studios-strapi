@@ -994,13 +994,14 @@ export interface ApiPagePage extends Schema.CollectionType {
     singularName: 'page';
     pluralName: 'pages';
     displayName: 'Pages';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Title: Attribute.String;
-    Slig: Attribute.UID<'api::page.page', 'Title'>;
+    Slug: Attribute.UID<'api::page.page', 'Title'>;
     Content: Attribute.DynamicZone<
       [
         'layout.video',
