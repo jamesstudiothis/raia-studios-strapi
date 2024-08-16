@@ -896,6 +896,66 @@ export interface ApiContactContact extends Schema.SingleType {
   };
 }
 
+export interface ApiFooterNavigationFooterNavigation extends Schema.SingleType {
+  collectionName: 'footer_navigations';
+  info: {
+    singularName: 'footer-navigation';
+    pluralName: 'footer-navigations';
+    displayName: 'Footer Navigation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    FooterItem: Attribute.Component<'layout.link', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer-navigation.footer-navigation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer-navigation.footer-navigation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHeaderNavigationHeaderNavigation extends Schema.SingleType {
+  collectionName: 'header_navigations';
+  info: {
+    singularName: 'header-navigation';
+    pluralName: 'header-navigations';
+    displayName: 'Header Navigation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    MenuItem: Attribute.Component<'layout.link', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::header-navigation.header-navigation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::header-navigation.header-navigation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomepageHomepage extends Schema.SingleType {
   collectionName: 'homepages';
   info: {
@@ -924,6 +984,46 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
       'oneToOne',
       'admin::user'
     > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPagePage extends Schema.CollectionType {
+  collectionName: 'pages';
+  info: {
+    singularName: 'page';
+    pluralName: 'pages';
+    displayName: 'Pages';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    Slig: Attribute.UID<'api::page.page', 'Title'>;
+    Content: Attribute.DynamicZone<
+      [
+        'layout.video',
+        'layout.video-carousel',
+        'layout.team',
+        'layout.team-members',
+        'layout.slider-video',
+        'layout.link',
+        'layout.hero',
+        'layout.headline-text',
+        'layout.credits',
+        'layout.contact',
+        'layout.capabilities',
+        'layout.body-text'
+      ]
+    >;
+    SEO: Attribute.Component<'seo.seo-information'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -993,6 +1093,36 @@ export interface ApiSiteOptionSiteOption extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::site-option.site-option',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSiteSeoSiteSeo extends Schema.SingleType {
+  collectionName: 'site_seos';
+  info: {
+    singularName: 'site-seo';
+    pluralName: 'site-seos';
+    displayName: 'Site SEO';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    DefaultSEO: Attribute.Component<'seo.seo-information'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::site-seo.site-seo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::site-seo.site-seo',
       'oneToOne',
       'admin::user'
     > &
@@ -1119,9 +1249,13 @@ declare module '@strapi/types' {
       'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::capability.capability': ApiCapabilityCapability;
       'api::contact.contact': ApiContactContact;
+      'api::footer-navigation.footer-navigation': ApiFooterNavigationFooterNavigation;
+      'api::header-navigation.header-navigation': ApiHeaderNavigationHeaderNavigation;
       'api::homepage.homepage': ApiHomepageHomepage;
+      'api::page.page': ApiPagePage;
       'api::services.services': ApiServicesServices;
       'api::site-option.site-option': ApiSiteOptionSiteOption;
+      'api::site-seo.site-seo': ApiSiteSeoSiteSeo;
       'api::tag.tag': ApiTagTag;
       'api::work.work': ApiWorkWork;
       'api::work-page.work-page': ApiWorkPageWorkPage;
