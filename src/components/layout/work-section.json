@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_layout_work_sections",
+  "info": {
+    "displayName": "Work Section",
+    "icon": "play",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "dividerText": {
+      "type": "string"
+    },
+    "works": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::work.work"
+    }
+  }
+}

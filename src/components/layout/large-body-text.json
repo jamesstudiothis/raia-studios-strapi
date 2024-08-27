@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_layout_large_body_texts",
+  "info": {
+    "displayName": "Large Body Text",
+    "icon": "bold",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "dividerText": {
+      "type": "string"
+    },
+    "primaryText": {
+      "type": "text"
+    }
+  }
+}

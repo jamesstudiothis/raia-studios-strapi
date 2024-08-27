@@ -2,7 +2,8 @@
   "collectionName": "components_layout_slider_videos",
   "info": {
     "displayName": "Slider Video",
-    "icon": "apps"
+    "icon": "apps",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -16,19 +17,27 @@
       "type": "string"
     },
     "Thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "Video": {
-      "type": "component",
-      "repeatable": false,
-      "component": "layout.video"
+    "videoURL": {
+      "type": "string"
+    },
+    "playState": {
+      "type": "enumeration",
+      "enum": [
+        "Autoplay",
+        "On Hover",
+        "Not Play"
+      ],
+      "default": "Autoplay"
     }
   }
 }

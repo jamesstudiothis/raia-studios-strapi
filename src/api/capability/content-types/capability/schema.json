@@ -22,11 +22,21 @@
       "targetField": "Name",
       "required": true
     },
-    "PrimaryText": {
-      "type": "text"
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.hero",
+        "layout.body-text",
+        "layout.video-carousel",
+        "layout.video",
+        "layout.work",
+        "layout.headline-text"
+      ]
     },
-    "VideoURL": {
-      "type": "string"
+    "SEO": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo-information"
     }
   }
 }

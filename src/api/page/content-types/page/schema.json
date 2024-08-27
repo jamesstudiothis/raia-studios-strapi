@@ -25,15 +25,14 @@
         "layout.video",
         "layout.video-carousel",
         "layout.team",
-        "layout.team-members",
-        "layout.slider-video",
-        "layout.link",
         "layout.hero",
         "layout.headline-text",
-        "layout.credits",
         "layout.contact",
         "layout.capabilities",
-        "layout.body-text"
+        "layout.body-text",
+        "layout.slider",
+        "layout.large-body-text",
+        "layout.work"
       ]
     },
     "SEO": {

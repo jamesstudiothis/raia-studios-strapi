@@ -12,6 +12,35 @@ export interface SeoSeoInformation extends Schema.Component {
   };
 }
 
+export interface LayoutWork extends Schema.Component {
+  collectionName: 'components_layout_works';
+  info: {
+    displayName: 'Work';
+    icon: 'play';
+    description: '';
+  };
+  attributes: {
+    work: Attribute.Component<'layout.work-section', true>;
+  };
+}
+
+export interface LayoutWorkSection extends Schema.Component {
+  collectionName: 'components_layout_work_sections';
+  info: {
+    displayName: 'Work Section';
+    icon: 'play';
+    description: '';
+  };
+  attributes: {
+    dividerText: Attribute.String;
+    works: Attribute.Relation<
+      'layout.work-section',
+      'oneToMany',
+      'api::work.work'
+    >;
+  };
+}
+
 export interface LayoutVideo extends Schema.Component {
   collectionName: 'components_video_videos';
   info: {
@@ -21,7 +50,8 @@ export interface LayoutVideo extends Schema.Component {
   };
   attributes: {
     videoURL: Attribute.String & Attribute.Required;
-    PlayState: Attribute.Enumeration<['Autoplay', 'On Hover', 'Not Play']>;
+    PlayState: Attribute.Enumeration<['Autoplay', 'On Hover', 'Not Play']> &
+      Attribute.DefaultTo<'Autoplay'>;
   };
 }
 
@@ -60,6 +90,19 @@ export interface LayoutTeamMembers extends Schema.Component {
   attributes: {
     Name: Attribute.String;
     Title: Attribute.String;
+    Link: Attribute.Component<'layout.link'>;
+  };
+}
+
+export interface LayoutSlider extends Schema.Component {
+  collectionName: 'components_layout_sliders';
+  info: {
+    displayName: 'Slider';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    Slide: Attribute.Component<'layout.slider-video', true>;
   };
 }
 
@@ -68,13 +111,16 @@ export interface LayoutSliderVideo extends Schema.Component {
   info: {
     displayName: 'Slider Video';
     icon: 'apps';
+    description: '';
   };
   attributes: {
     Title: Attribute.String;
     SecondaryTitle: Attribute.String;
     URL: Attribute.String;
     Thumbnail: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    Video: Attribute.Component<'layout.video'>;
+    videoURL: Attribute.String;
+    playState: Attribute.Enumeration<['Autoplay', 'On Hover', 'Not Play']> &
+      Attribute.DefaultTo<'Autoplay'>;
   };
 }
 
@@ -87,6 +133,19 @@ export interface LayoutLink extends Schema.Component {
   attributes: {
     label: Attribute.String & Attribute.Required;
     URL: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface LayoutLargeBodyText extends Schema.Component {
+  collectionName: 'components_layout_large_body_texts';
+  info: {
+    displayName: 'Large Body Text';
+    icon: 'bold';
+    description: '';
+  };
+  attributes: {
+    dividerText: Attribute.String;
+    primaryText: Attribute.Text;
   };
 }
 
@@ -139,6 +198,33 @@ export interface LayoutContact extends Schema.Component {
     PrimaryContact: Attribute.Component<'layout.link'>;
     SecondaryContact: Attribute.Component<'layout.link', true>;
     SocialLinks: Attribute.Component<'layout.link', true>;
+    contactSection: Attribute.Component<'layout.contact-section', true>;
+  };
+}
+
+export interface LayoutContactSection extends Schema.Component {
+  collectionName: 'components_layout_contact_sections';
+  info: {
+    displayName: 'Contact Section';
+    icon: 'chartPie';
+  };
+  attributes: {
+    headingText: Attribute.String;
+    contactItem: Attribute.Component<'layout.contact-item', true>;
+  };
+}
+
+export interface LayoutContactItem extends Schema.Component {
+  collectionName: 'components_layout_contact_items';
+  info: {
+    displayName: 'Contact Item';
+    icon: 'user';
+    description: '';
+  };
+  attributes: {
+    headingText: Attribute.String;
+    subheadingText: Attribute.String;
+    link: Attribute.Component<'layout.link', true>;
   };
 }
 
@@ -170,6 +256,7 @@ export interface LayoutBodyText extends Schema.Component {
     headingText: Attribute.Text;
     PrimaryText: Attribute.Text;
     Link: Attribute.Component<'layout.link'>;
+    video: Attribute.Component<'layout.video'>;
   };
 }
 
@@ -205,16 +292,22 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'seo.seo-information': SeoSeoInformation;
+      'layout.work': LayoutWork;
+      'layout.work-section': LayoutWorkSection;
       'layout.video': LayoutVideo;
       'layout.video-carousel': LayoutVideoCarousel;
       'layout.team': LayoutTeam;
       'layout.team-members': LayoutTeamMembers;
+      'layout.slider': LayoutSlider;
       'layout.slider-video': LayoutSliderVideo;
       'layout.link': LayoutLink;
+      'layout.large-body-text': LayoutLargeBodyText;
       'layout.hero': LayoutHero;
       'layout.headline-text': LayoutHeadlineText;
       'layout.credits': LayoutCredits;
       'layout.contact': LayoutContact;
+      'layout.contact-section': LayoutContactSection;
+      'layout.contact-item': LayoutContactItem;
       'layout.capabilities': LayoutCapabilities;
       'layout.body-text': LayoutBodyText;
       'homepage-slider.work-item': HomepageSliderWorkItem;

@@ -842,8 +842,17 @@ export interface ApiCapabilityCapability extends Schema.CollectionType {
     Name: Attribute.String & Attribute.Required & Attribute.Unique;
     Slug: Attribute.UID<'api::capability.capability', 'Name'> &
       Attribute.Required;
-    PrimaryText: Attribute.Text;
-    VideoURL: Attribute.String;
+    content: Attribute.DynamicZone<
+      [
+        'layout.hero',
+        'layout.body-text',
+        'layout.video-carousel',
+        'layout.video',
+        'layout.work',
+        'layout.headline-text'
+      ]
+    >;
+    SEO: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -947,15 +956,14 @@ export interface ApiPagePage extends Schema.CollectionType {
         'layout.video',
         'layout.video-carousel',
         'layout.team',
-        'layout.team-members',
-        'layout.slider-video',
-        'layout.link',
         'layout.hero',
         'layout.headline-text',
-        'layout.credits',
         'layout.contact',
         'layout.capabilities',
-        'layout.body-text'
+        'layout.body-text',
+        'layout.slider',
+        'layout.large-body-text',
+        'layout.work'
       ]
     >;
     SEO: Attribute.Component<'seo.seo-information'>;

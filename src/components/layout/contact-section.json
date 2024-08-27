@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_layout_contact_sections",
+  "info": {
+    "displayName": "Contact Section",
+    "icon": "chartPie"
+  },
+  "options": {},
+  "attributes": {
+    "headingText": {
+      "type": "string"
+    },
+    "contactItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.contact-item"
+    }
+  }
+}

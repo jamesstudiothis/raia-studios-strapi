@@ -20,6 +20,11 @@
       "type": "component",
       "repeatable": false,
       "component": "layout.link"
+    },
+    "video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.video"
     }
   }
 }

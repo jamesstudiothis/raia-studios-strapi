@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_layout_sliders",
+  "info": {
+    "displayName": "Slider",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Slide": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.slider-video"
+    }
+  }
+}

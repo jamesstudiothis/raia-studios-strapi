@@ -1,21 +1,21 @@
 {
-  "collectionName": "components_layout_team_members",
+  "collectionName": "components_layout_contact_items",
   "info": {
-    "displayName": "Team Members",
+    "displayName": "Contact Item",
     "icon": "user",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "Name": {
+    "headingText": {
       "type": "string"
     },
-    "Title": {
+    "subheadingText": {
       "type": "string"
     },
-    "Link": {
+    "link": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "layout.link"
     }
   }

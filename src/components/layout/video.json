@@ -17,7 +17,8 @@
         "Autoplay",
         "On Hover",
         "Not Play"
-      ]
+      ],
+      "default": "Autoplay"
     }
   }
 }

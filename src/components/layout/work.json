@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_layout_works",
+  "info": {
+    "displayName": "Work",
+    "icon": "play",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "work": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.work-section"
+    }
+  }
+}
