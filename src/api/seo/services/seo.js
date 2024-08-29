@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * services service
+ * seo service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::services.services');
+module.exports = createCoreService('api::seo.seo');

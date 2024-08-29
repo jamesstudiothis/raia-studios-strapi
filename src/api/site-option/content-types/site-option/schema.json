@@ -8,24 +8,16 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "MenuNavigation": {
-      "type": "component",
-      "repeatable": true,
-      "component": "layout.link"
+    "screensaver": {
+      "type": "boolean",
+      "default": true
     },
-    "FooterNavigation": {
-      "type": "component",
-      "repeatable": true,
-      "component": "layout.link"
-    },
-    "DefaultSEO": {
-      "type": "component",
-      "repeatable": false,
-      "component": "seo.seo-information"
+    "screensaverUrl": {
+      "type": "string"
     }
   }
 }

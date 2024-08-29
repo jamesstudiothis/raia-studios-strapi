@@ -13,21 +13,6 @@
     "PrimaryText": {
       "type": "text"
     },
-    "PrimaryContact": {
-      "type": "component",
-      "repeatable": false,
-      "component": "layout.link"
-    },
-    "SecondaryContact": {
-      "type": "component",
-      "repeatable": true,
-      "component": "layout.link"
-    },
-    "SocialLinks": {
-      "type": "component",
-      "repeatable": true,
-      "component": "layout.link"
-    },
     "contactSection": {
       "type": "component",
       "repeatable": true,

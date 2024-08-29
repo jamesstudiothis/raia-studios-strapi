@@ -788,45 +788,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiAboutUsAboutUs extends Schema.SingleType {
-  collectionName: 'about_uses';
-  info: {
-    singularName: 'about-us';
-    pluralName: 'about-uses';
-    displayName: 'About Us';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Title: Attribute.String & Attribute.Required;
-    slug: Attribute.UID<'api::about-us.about-us', 'Title'> & Attribute.Required;
-    Hero: Attribute.Component<'layout.hero'>;
-    AboutUsText: Attribute.Component<'layout.body-text'>;
-    VideoCarousel: Attribute.Component<'layout.video-carousel'>;
-    OurApproachHeadline: Attribute.Component<'layout.headline-text'>;
-    OurApproachText: Attribute.Component<'layout.body-text'>;
-    Team: Attribute.Component<'layout.team'>;
-    SEO: Attribute.Component<'seo.seo-information'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::about-us.about-us',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::about-us.about-us',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiCapabilityCapability extends Schema.CollectionType {
   collectionName: 'capabilities';
   info: {
@@ -870,34 +831,28 @@ export interface ApiCapabilityCapability extends Schema.CollectionType {
   };
 }
 
-export interface ApiContactContact extends Schema.SingleType {
-  collectionName: 'contacts';
+export interface ApiFooterNavigationFooterNavigation extends Schema.SingleType {
+  collectionName: 'footer_navigations';
   info: {
-    singularName: 'contact';
-    pluralName: 'contacts';
-    displayName: 'Contact';
-    description: '';
+    singularName: 'footer-navigation';
+    pluralName: 'footer-navigations';
+    displayName: 'Footer Navigation';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
-    Title: Attribute.String;
-    slug: Attribute.UID<'api::contact.contact', 'Title'> & Attribute.Required;
-    Contact: Attribute.Component<'layout.contact'>;
-    Hero: Attribute.Component<'layout.hero'>;
-    SEO: Attribute.Component<'seo.seo-information', true>;
+    footerColumn: Attribute.Component<'footer.column', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::contact.contact',
+      'api::footer-navigation.footer-navigation',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::contact.contact',
+      'api::footer-navigation.footer-navigation',
       'oneToOne',
       'admin::user'
     > &
@@ -905,31 +860,28 @@ export interface ApiContactContact extends Schema.SingleType {
   };
 }
 
-export interface ApiHomepageHomepage extends Schema.SingleType {
-  collectionName: 'homepages';
+export interface ApiHeaderNavigationHeaderNavigation extends Schema.SingleType {
+  collectionName: 'header_navigations';
   info: {
-    singularName: 'homepage';
-    pluralName: 'homepages';
-    displayName: 'Homepage';
-    description: '';
+    singularName: 'header-navigation';
+    pluralName: 'header-navigations';
+    displayName: 'Header Navigation';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
-    Slider: Attribute.Component<'layout.slider-video', true>;
-    seo: Attribute.Component<'seo.seo-information'>;
+    link: Attribute.Component<'layout.link', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::homepage.homepage',
+      'api::header-navigation.header-navigation',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::homepage.homepage',
+      'api::header-navigation.header-navigation',
       'oneToOne',
       'admin::user'
     > &
@@ -977,41 +929,24 @@ export interface ApiPagePage extends Schema.CollectionType {
   };
 }
 
-export interface ApiServicesServices extends Schema.SingleType {
-  collectionName: 'servicess';
+export interface ApiSeoSeo extends Schema.SingleType {
+  collectionName: 'seos';
   info: {
-    singularName: 'services';
-    pluralName: 'servicess';
-    displayName: 'Services';
+    singularName: 'seo';
+    pluralName: 'seos';
+    displayName: 'SEO';
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
-    Title: Attribute.String;
-    slug: Attribute.UID<'api::services.services', 'Title'>;
-    Hero: Attribute.Component<'layout.hero'>;
-    Video: Attribute.Component<'layout.video'>;
-    AboutUsHeadline: Attribute.Component<'layout.headline-text'>;
-    AboutUsText: Attribute.Component<'layout.body-text'>;
-    Capabilities: Attribute.Component<'layout.capabilities'>;
-    OurApproachText: Attribute.Component<'layout.body-text'>;
-    SEO: Attribute.Component<'seo.seo-information'>;
+    seo: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::services.services',
-      'oneToOne',
-      'admin::user'
-    > &
+    createdBy: Attribute.Relation<'api::seo.seo', 'oneToOne', 'admin::user'> &
       Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::services.services',
-      'oneToOne',
-      'admin::user'
-    > &
+    updatedBy: Attribute.Relation<'api::seo.seo', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -1025,15 +960,13 @@ export interface ApiSiteOptionSiteOption extends Schema.SingleType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
-    MenuNavigation: Attribute.Component<'layout.link', true>;
-    FooterNavigation: Attribute.Component<'layout.link', true>;
-    DefaultSEO: Attribute.Component<'seo.seo-information'>;
+    screensaver: Attribute.Boolean & Attribute.DefaultTo<true>;
+    screensaverUrl: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::site-option.site-option',
       'oneToOne',
@@ -1114,39 +1047,6 @@ export interface ApiWorkWork extends Schema.CollectionType {
   };
 }
 
-export interface ApiWorkPageWorkPage extends Schema.SingleType {
-  collectionName: 'work_pages';
-  info: {
-    singularName: 'work-page';
-    pluralName: 'work-pages';
-    displayName: 'Work Page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Title: Attribute.String & Attribute.Required;
-    slug: Attribute.UID<'api::work-page.work-page', 'Title'>;
-    seo: Attribute.Component<'seo.seo-information'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::work-page.work-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::work-page.work-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1165,16 +1065,14 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::about-us.about-us': ApiAboutUsAboutUs;
       'api::capability.capability': ApiCapabilityCapability;
-      'api::contact.contact': ApiContactContact;
-      'api::homepage.homepage': ApiHomepageHomepage;
+      'api::footer-navigation.footer-navigation': ApiFooterNavigationFooterNavigation;
+      'api::header-navigation.header-navigation': ApiHeaderNavigationHeaderNavigation;
       'api::page.page': ApiPagePage;
-      'api::services.services': ApiServicesServices;
+      'api::seo.seo': ApiSeoSeo;
       'api::site-option.site-option': ApiSiteOptionSiteOption;
       'api::tag.tag': ApiTagTag;
       'api::work.work': ApiWorkWork;
-      'api::work-page.work-page': ApiWorkPageWorkPage;
     }
   }
 }

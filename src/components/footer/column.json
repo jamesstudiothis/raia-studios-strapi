@@ -1,13 +1,13 @@
 {
-  "collectionName": "components_layout_capabilities",
+  "collectionName": "components_footer_columns",
   "info": {
-    "displayName": "Capabilities",
-    "icon": "monitor",
+    "displayName": "Column",
+    "icon": "bulletList",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "dividerText": {
+    "headingText": {
       "type": "string"
     },
     "link": {

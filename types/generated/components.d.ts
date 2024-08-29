@@ -12,6 +12,34 @@ export interface SeoSeoInformation extends Schema.Component {
   };
 }
 
+export interface HomepageSliderWorkItem extends Schema.Component {
+  collectionName: 'components_homepage_slider_work_items';
+  info: {
+    displayName: 'Work Item';
+    icon: 'play';
+  };
+  attributes: {
+    work: Attribute.Relation<
+      'homepage-slider.work-item',
+      'oneToOne',
+      'api::work.work'
+    >;
+  };
+}
+
+export interface HomepageSliderVideo extends Schema.Component {
+  collectionName: 'components_homepage_slider_videos';
+  info: {
+    displayName: 'Video';
+    description: '';
+  };
+  attributes: {
+    Name: Attribute.String;
+    URL: Attribute.String;
+    Video: Attribute.Component<'layout.video'>;
+  };
+}
+
 export interface LayoutWork extends Schema.Component {
   collectionName: 'components_layout_works';
   info: {
@@ -195,9 +223,6 @@ export interface LayoutContact extends Schema.Component {
   attributes: {
     DividerText: Attribute.String;
     PrimaryText: Attribute.Text;
-    PrimaryContact: Attribute.Component<'layout.link'>;
-    SecondaryContact: Attribute.Component<'layout.link', true>;
-    SocialLinks: Attribute.Component<'layout.link', true>;
     contactSection: Attribute.Component<'layout.contact-section', true>;
   };
 }
@@ -236,11 +261,8 @@ export interface LayoutCapabilities extends Schema.Component {
     description: '';
   };
   attributes: {
-    Capability: Attribute.Relation<
-      'layout.capabilities',
-      'oneToMany',
-      'api::capability.capability'
-    >;
+    dividerText: Attribute.String;
+    link: Attribute.Component<'layout.link', true>;
   };
 }
 
@@ -260,31 +282,16 @@ export interface LayoutBodyText extends Schema.Component {
   };
 }
 
-export interface HomepageSliderWorkItem extends Schema.Component {
-  collectionName: 'components_homepage_slider_work_items';
+export interface FooterColumn extends Schema.Component {
+  collectionName: 'components_footer_columns';
   info: {
-    displayName: 'Work Item';
-    icon: 'play';
-  };
-  attributes: {
-    work: Attribute.Relation<
-      'homepage-slider.work-item',
-      'oneToOne',
-      'api::work.work'
-    >;
-  };
-}
-
-export interface HomepageSliderVideo extends Schema.Component {
-  collectionName: 'components_homepage_slider_videos';
-  info: {
-    displayName: 'Video';
+    displayName: 'Column';
+    icon: 'bulletList';
     description: '';
   };
   attributes: {
-    Name: Attribute.String;
-    URL: Attribute.String;
-    Video: Attribute.Component<'layout.video'>;
+    headingText: Attribute.String;
+    link: Attribute.Component<'layout.link', true>;
   };
 }
 
@@ -292,6 +299,8 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'seo.seo-information': SeoSeoInformation;
+      'homepage-slider.work-item': HomepageSliderWorkItem;
+      'homepage-slider.video': HomepageSliderVideo;
       'layout.work': LayoutWork;
       'layout.work-section': LayoutWorkSection;
       'layout.video': LayoutVideo;
@@ -310,8 +319,7 @@ declare module '@strapi/types' {
       'layout.contact-item': LayoutContactItem;
       'layout.capabilities': LayoutCapabilities;
       'layout.body-text': LayoutBodyText;
-      'homepage-slider.work-item': HomepageSliderWorkItem;
-      'homepage-slider.video': HomepageSliderVideo;
+      'footer.column': FooterColumn;
     }
   }
 }
