@@ -12,34 +12,6 @@ export interface SeoSeoInformation extends Schema.Component {
   };
 }
 
-export interface HomepageSliderWorkItem extends Schema.Component {
-  collectionName: 'components_homepage_slider_work_items';
-  info: {
-    displayName: 'Work Item';
-    icon: 'play';
-  };
-  attributes: {
-    work: Attribute.Relation<
-      'homepage-slider.work-item',
-      'oneToOne',
-      'api::work.work'
-    >;
-  };
-}
-
-export interface HomepageSliderVideo extends Schema.Component {
-  collectionName: 'components_homepage_slider_videos';
-  info: {
-    displayName: 'Video';
-    description: '';
-  };
-  attributes: {
-    Name: Attribute.String;
-    URL: Attribute.String;
-    Video: Attribute.Component<'layout.video'>;
-  };
-}
-
 export interface LayoutWork extends Schema.Component {
   collectionName: 'components_layout_works';
   info: {
@@ -282,6 +254,34 @@ export interface LayoutBodyText extends Schema.Component {
   };
 }
 
+export interface HomepageSliderWorkItem extends Schema.Component {
+  collectionName: 'components_homepage_slider_work_items';
+  info: {
+    displayName: 'Work Item';
+    icon: 'play';
+  };
+  attributes: {
+    work: Attribute.Relation<
+      'homepage-slider.work-item',
+      'oneToOne',
+      'api::work.work'
+    >;
+  };
+}
+
+export interface HomepageSliderVideo extends Schema.Component {
+  collectionName: 'components_homepage_slider_videos';
+  info: {
+    displayName: 'Video';
+    description: '';
+  };
+  attributes: {
+    Name: Attribute.String;
+    URL: Attribute.String;
+    Video: Attribute.Component<'layout.video'>;
+  };
+}
+
 export interface FooterColumn extends Schema.Component {
   collectionName: 'components_footer_columns';
   info: {
@@ -299,8 +299,6 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'seo.seo-information': SeoSeoInformation;
-      'homepage-slider.work-item': HomepageSliderWorkItem;
-      'homepage-slider.video': HomepageSliderVideo;
       'layout.work': LayoutWork;
       'layout.work-section': LayoutWorkSection;
       'layout.video': LayoutVideo;
@@ -319,6 +317,8 @@ declare module '@strapi/types' {
       'layout.contact-item': LayoutContactItem;
       'layout.capabilities': LayoutCapabilities;
       'layout.body-text': LayoutBodyText;
+      'homepage-slider.work-item': HomepageSliderWorkItem;
+      'homepage-slider.video': HomepageSliderVideo;
       'footer.column': FooterColumn;
     }
   }
