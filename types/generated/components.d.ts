@@ -254,6 +254,19 @@ export interface LayoutBodyText extends Schema.Component {
   };
 }
 
+export interface FooterColumn extends Schema.Component {
+  collectionName: 'components_footer_columns';
+  info: {
+    displayName: 'Column';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    headingText: Attribute.String;
+    link: Attribute.Component<'layout.link', true>;
+  };
+}
+
 export interface HomepageSliderWorkItem extends Schema.Component {
   collectionName: 'components_homepage_slider_work_items';
   info: {
@@ -282,19 +295,6 @@ export interface HomepageSliderVideo extends Schema.Component {
   };
 }
 
-export interface FooterColumn extends Schema.Component {
-  collectionName: 'components_footer_columns';
-  info: {
-    displayName: 'Column';
-    icon: 'bulletList';
-    description: '';
-  };
-  attributes: {
-    headingText: Attribute.String;
-    link: Attribute.Component<'layout.link', true>;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -317,9 +317,9 @@ declare module '@strapi/types' {
       'layout.contact-item': LayoutContactItem;
       'layout.capabilities': LayoutCapabilities;
       'layout.body-text': LayoutBodyText;
+      'footer.column': FooterColumn;
       'homepage-slider.work-item': HomepageSliderWorkItem;
       'homepage-slider.video': HomepageSliderVideo;
-      'footer.column': FooterColumn;
     }
   }
 }

@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * capability router
+ * service router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::capability.capability');
+module.exports = createCoreRouter('api::service.service');

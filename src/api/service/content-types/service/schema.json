@@ -1,25 +1,25 @@
 {
   "kind": "collectionType",
-  "collectionName": "capabilities",
+  "collectionName": "services",
   "info": {
-    "singularName": "capability",
-    "pluralName": "capabilities",
-    "displayName": "Capability",
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Services",
     "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Slug": {
+    "slug": {
       "type": "uid",
-      "targetField": "Name",
+      "targetField": "name",
       "required": true
     },
     "content": {
@@ -33,7 +33,7 @@
         "layout.headline-text"
       ]
     },
-    "SEO": {
+    "seo": {
       "type": "component",
       "repeatable": false,
       "component": "seo.seo-information"

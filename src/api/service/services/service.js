@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * capability service
+ * service service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::capability.capability');
+module.exports = createCoreService('api::service.service');

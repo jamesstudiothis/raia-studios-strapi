@@ -788,49 +788,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiCapabilityCapability extends Schema.CollectionType {
-  collectionName: 'capabilities';
-  info: {
-    singularName: 'capability';
-    pluralName: 'capabilities';
-    displayName: 'Capability';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    Name: Attribute.String & Attribute.Required & Attribute.Unique;
-    Slug: Attribute.UID<'api::capability.capability', 'Name'> &
-      Attribute.Required;
-    content: Attribute.DynamicZone<
-      [
-        'layout.hero',
-        'layout.body-text',
-        'layout.video-carousel',
-        'layout.video',
-        'layout.work',
-        'layout.headline-text'
-      ]
-    >;
-    SEO: Attribute.Component<'seo.seo-information'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::capability.capability',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::capability.capability',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiFooterNavigationFooterNavigation extends Schema.SingleType {
   collectionName: 'footer_navigations';
   info: {
@@ -951,6 +908,49 @@ export interface ApiSeoSeo extends Schema.SingleType {
   };
 }
 
+export interface ApiServiceService extends Schema.CollectionType {
+  collectionName: 'services';
+  info: {
+    singularName: 'service';
+    pluralName: 'services';
+    displayName: 'Services';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required & Attribute.Unique;
+    slug: Attribute.UID<'api::service.service', 'name'> & Attribute.Required;
+    content: Attribute.DynamicZone<
+      [
+        'layout.hero',
+        'layout.body-text',
+        'layout.video-carousel',
+        'layout.video',
+        'layout.work',
+        'layout.headline-text'
+      ]
+    >;
+    seo: Attribute.Component<'seo.seo-information'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service.service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSiteOptionSiteOption extends Schema.SingleType {
   collectionName: 'site_options';
   info: {
@@ -987,7 +987,8 @@ export interface ApiTagTag extends Schema.CollectionType {
   info: {
     singularName: 'tag';
     pluralName: 'tags';
-    displayName: 'Tag';
+    displayName: 'Tags';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1010,32 +1011,32 @@ export interface ApiWorkWork extends Schema.CollectionType {
   info: {
     singularName: 'work';
     pluralName: 'works';
-    displayName: 'Work';
+    displayName: 'Projects';
     description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String &
+    title: Attribute.String &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
     slug: Attribute.UID<'api::work.work', 'Title'> & Attribute.Required;
-    Creator: Attribute.String;
-    Year: Attribute.String;
+    creator: Attribute.String;
+    year: Attribute.String;
     thumbnail: Attribute.Media<'images'>;
-    ThumbnailURL: Attribute.String;
-    WorkURL: Attribute.Component<'layout.video'>;
-    About: Attribute.Text;
-    Credit: Attribute.Component<'layout.credits', true>;
-    capabilities: Attribute.Relation<
+    thumbnailUrl: Attribute.String;
+    workUrl: Attribute.Component<'layout.video'>;
+    about: Attribute.Text;
+    credit: Attribute.Component<'layout.credits', true>;
+    services: Attribute.Relation<
       'api::work.work',
       'oneToMany',
-      'api::capability.capability'
+      'api::service.service'
     >;
-    Tags: Attribute.Relation<'api::work.work', 'oneToMany', 'api::tag.tag'>;
+    tags: Attribute.Relation<'api::work.work', 'oneToMany', 'api::tag.tag'>;
     SEO: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1065,11 +1066,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::capability.capability': ApiCapabilityCapability;
       'api::footer-navigation.footer-navigation': ApiFooterNavigationFooterNavigation;
       'api::header-navigation.header-navigation': ApiHeaderNavigationHeaderNavigation;
       'api::page.page': ApiPagePage;
       'api::seo.seo': ApiSeoSeo;
+      'api::service.service': ApiServiceService;
       'api::site-option.site-option': ApiSiteOptionSiteOption;
       'api::tag.tag': ApiTagTag;
       'api::work.work': ApiWorkWork;
