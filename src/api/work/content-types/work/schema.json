@@ -19,7 +19,7 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "Title",
+      "targetField": "title",
       "required": true
     },
     "creator": {

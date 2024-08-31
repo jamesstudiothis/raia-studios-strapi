@@ -7,11 +7,11 @@
   },
   "options": {},
   "attributes": {
-    "videoURL": {
+    "videoUrl": {
       "type": "string",
       "required": true
     },
-    "PlayState": {
+    "playState": {
       "type": "enumeration",
       "enum": [
         "Autoplay",

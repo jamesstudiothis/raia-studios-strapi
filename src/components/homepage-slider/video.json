@@ -6,13 +6,13 @@
   },
   "options": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "URL": {
+    "url": {
       "type": "string"
     },
-    "Video": {
+    "video": {
       "type": "component",
       "repeatable": false,
       "component": "layout.video"

@@ -1023,7 +1023,7 @@ export interface ApiWorkWork extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
-    slug: Attribute.UID<'api::work.work', 'Title'> & Attribute.Required;
+    slug: Attribute.UID<'api::work.work', 'title'> & Attribute.Required;
     creator: Attribute.String;
     year: Attribute.String;
     thumbnail: Attribute.Media<'images'>;

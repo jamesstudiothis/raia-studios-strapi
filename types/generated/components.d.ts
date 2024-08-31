@@ -12,6 +12,34 @@ export interface SeoSeoInformation extends Schema.Component {
   };
 }
 
+export interface HomepageSliderWorkItem extends Schema.Component {
+  collectionName: 'components_homepage_slider_work_items';
+  info: {
+    displayName: 'Work Item';
+    icon: 'play';
+  };
+  attributes: {
+    work: Attribute.Relation<
+      'homepage-slider.work-item',
+      'oneToOne',
+      'api::work.work'
+    >;
+  };
+}
+
+export interface HomepageSliderVideo extends Schema.Component {
+  collectionName: 'components_homepage_slider_videos';
+  info: {
+    displayName: 'Video';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String;
+    url: Attribute.String;
+    video: Attribute.Component<'layout.video'>;
+  };
+}
+
 export interface LayoutWork extends Schema.Component {
   collectionName: 'components_layout_works';
   info: {
@@ -49,8 +77,8 @@ export interface LayoutVideo extends Schema.Component {
     description: '';
   };
   attributes: {
-    videoURL: Attribute.String & Attribute.Required;
-    PlayState: Attribute.Enumeration<['Autoplay', 'On Hover', 'Not Play']> &
+    videoUrl: Attribute.String & Attribute.Required;
+    playState: Attribute.Enumeration<['Autoplay', 'On Hover', 'Not Play']> &
       Attribute.DefaultTo<'Autoplay'>;
   };
 }
@@ -267,38 +295,12 @@ export interface FooterColumn extends Schema.Component {
   };
 }
 
-export interface HomepageSliderWorkItem extends Schema.Component {
-  collectionName: 'components_homepage_slider_work_items';
-  info: {
-    displayName: 'Work Item';
-    icon: 'play';
-  };
-  attributes: {
-    work: Attribute.Relation<
-      'homepage-slider.work-item',
-      'oneToOne',
-      'api::work.work'
-    >;
-  };
-}
-
-export interface HomepageSliderVideo extends Schema.Component {
-  collectionName: 'components_homepage_slider_videos';
-  info: {
-    displayName: 'Video';
-    description: '';
-  };
-  attributes: {
-    Name: Attribute.String;
-    URL: Attribute.String;
-    Video: Attribute.Component<'layout.video'>;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'seo.seo-information': SeoSeoInformation;
+      'homepage-slider.work-item': HomepageSliderWorkItem;
+      'homepage-slider.video': HomepageSliderVideo;
       'layout.work': LayoutWork;
       'layout.work-section': LayoutWorkSection;
       'layout.video': LayoutVideo;
@@ -318,8 +320,6 @@ declare module '@strapi/types' {
       'layout.capabilities': LayoutCapabilities;
       'layout.body-text': LayoutBodyText;
       'footer.column': FooterColumn;
-      'homepage-slider.work-item': HomepageSliderWorkItem;
-      'homepage-slider.video': HomepageSliderVideo;
     }
   }
 }
