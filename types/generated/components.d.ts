@@ -89,7 +89,7 @@ export interface LayoutSliderVideo extends Schema.Component {
     title: Attribute.String;
     secondaryTitle: Attribute.String;
     url: Attribute.String;
-    thumbnail: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    thumbnail: Attribute.Media<'images'>;
     videoUrl: Attribute.String;
     playState: Attribute.Enumeration<['Autoplay', 'On Hover', 'Not Play']> &
       Attribute.DefaultTo<'Autoplay'>;
