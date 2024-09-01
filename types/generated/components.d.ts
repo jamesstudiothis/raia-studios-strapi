@@ -255,6 +255,33 @@ export interface LayoutBodyText extends Schema.Component {
   };
 }
 
+export interface LayoutAccordion extends Schema.Component {
+  collectionName: 'components_layout_accordions';
+  info: {
+    displayName: 'Accordion';
+    icon: 'bulletList';
+  };
+  attributes: {
+    dividerText: Attribute.String;
+    headlineText: Attribute.String;
+    titleText: Attribute.String;
+    accordionItem: Attribute.Component<'layout.accordion-item', true>;
+  };
+}
+
+export interface LayoutAccordionItem extends Schema.Component {
+  collectionName: 'components_layout_accordion_items';
+  info: {
+    displayName: 'Accordion Item';
+    icon: 'bulletList';
+  };
+  attributes: {
+    headingText: Attribute.String;
+    subheadingText: Attribute.String;
+    link: Attribute.Component<'layout.link'>;
+  };
+}
+
 export interface FooterColumn extends Schema.Component {
   collectionName: 'components_footer_columns';
   info: {
@@ -290,6 +317,8 @@ declare module '@strapi/types' {
       'layout.contact-item': LayoutContactItem;
       'layout.capabilities': LayoutCapabilities;
       'layout.body-text': LayoutBodyText;
+      'layout.accordion': LayoutAccordion;
+      'layout.accordion-item': LayoutAccordionItem;
       'footer.column': FooterColumn;
     }
   }

@@ -864,7 +864,7 @@ export interface ApiPagePage extends Schema.CollectionType {
       [
         'layout.video',
         'layout.video-carousel',
-        'layout.team',
+        'layout.accordion',
         'layout.hero',
         'layout.headline-text',
         'layout.contact',

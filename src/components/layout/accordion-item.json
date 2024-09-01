@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_accordion_items",
+  "info": {
+    "displayName": "Accordion Item",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "headingText": {
+      "type": "string"
+    },
+    "subheadingText": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.link"
+    }
+  }
+}

@@ -24,7 +24,7 @@
       "components": [
         "layout.video",
         "layout.video-carousel",
-        "layout.team",
+        "layout.accordion",
         "layout.hero",
         "layout.headline-text",
         "layout.contact",
