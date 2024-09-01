@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "Credit": {
+    "credit": {
       "type": "string"
     }
   }

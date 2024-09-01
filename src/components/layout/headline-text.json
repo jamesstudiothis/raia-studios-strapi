@@ -10,7 +10,7 @@
     "dividerText": {
       "type": "string"
     },
-    "Text": {
+    "text": {
       "type": "text"
     }
   }

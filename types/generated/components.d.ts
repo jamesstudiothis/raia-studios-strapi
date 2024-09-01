@@ -12,34 +12,6 @@ export interface SeoSeoInformation extends Schema.Component {
   };
 }
 
-export interface HomepageSliderWorkItem extends Schema.Component {
-  collectionName: 'components_homepage_slider_work_items';
-  info: {
-    displayName: 'Work Item';
-    icon: 'play';
-  };
-  attributes: {
-    work: Attribute.Relation<
-      'homepage-slider.work-item',
-      'oneToOne',
-      'api::work.work'
-    >;
-  };
-}
-
-export interface HomepageSliderVideo extends Schema.Component {
-  collectionName: 'components_homepage_slider_videos';
-  info: {
-    displayName: 'Video';
-    description: '';
-  };
-  attributes: {
-    name: Attribute.String;
-    url: Attribute.String;
-    video: Attribute.Component<'layout.video'>;
-  };
-}
-
 export interface LayoutWork extends Schema.Component {
   collectionName: 'components_layout_works';
   info: {
@@ -130,7 +102,7 @@ export interface LayoutSlider extends Schema.Component {
     description: '';
   };
   attributes: {
-    Slide: Attribute.Component<'layout.slider-video', true>;
+    slide: Attribute.Component<'layout.slider-video', true>;
   };
 }
 
@@ -142,11 +114,11 @@ export interface LayoutSliderVideo extends Schema.Component {
     description: '';
   };
   attributes: {
-    Title: Attribute.String;
-    SecondaryTitle: Attribute.String;
-    URL: Attribute.String;
-    Thumbnail: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    videoURL: Attribute.String;
+    title: Attribute.String;
+    secondaryTitle: Attribute.String;
+    url: Attribute.String;
+    thumbnail: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    videoUrl: Attribute.String;
     playState: Attribute.Enumeration<['Autoplay', 'On Hover', 'Not Play']> &
       Attribute.DefaultTo<'Autoplay'>;
   };
@@ -157,10 +129,11 @@ export interface LayoutLink extends Schema.Component {
   info: {
     displayName: 'link';
     icon: 'arrowRight';
+    description: '';
   };
   attributes: {
     label: Attribute.String & Attribute.Required;
-    URL: Attribute.String & Attribute.Required;
+    url: Attribute.String & Attribute.Required;
   };
 }
 
@@ -197,7 +170,7 @@ export interface LayoutHeadlineText extends Schema.Component {
   };
   attributes: {
     dividerText: Attribute.String;
-    Text: Attribute.Text;
+    text: Attribute.Text;
   };
 }
 
@@ -209,7 +182,7 @@ export interface LayoutCredits extends Schema.Component {
     description: '';
   };
   attributes: {
-    Credit: Attribute.String;
+    credit: Attribute.String;
   };
 }
 
@@ -221,8 +194,8 @@ export interface LayoutContact extends Schema.Component {
     description: '';
   };
   attributes: {
-    DividerText: Attribute.String;
-    PrimaryText: Attribute.Text;
+    dividerText: Attribute.String;
+    primaryText: Attribute.Text;
     contactSection: Attribute.Component<'layout.contact-section', true>;
   };
 }
@@ -276,8 +249,8 @@ export interface LayoutBodyText extends Schema.Component {
   attributes: {
     dividerText: Attribute.String;
     headingText: Attribute.Text;
-    PrimaryText: Attribute.Text;
-    Link: Attribute.Component<'layout.link'>;
+    primaryText: Attribute.Text;
+    link: Attribute.Component<'layout.link'>;
     video: Attribute.Component<'layout.video'>;
   };
 }
@@ -299,8 +272,6 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'seo.seo-information': SeoSeoInformation;
-      'homepage-slider.work-item': HomepageSliderWorkItem;
-      'homepage-slider.video': HomepageSliderVideo;
       'layout.work': LayoutWork;
       'layout.work-section': LayoutWorkSection;
       'layout.video': LayoutVideo;

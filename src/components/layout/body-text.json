@@ -13,10 +13,10 @@
     "headingText": {
       "type": "text"
     },
-    "PrimaryText": {
+    "primaryText": {
       "type": "text"
     },
-    "Link": {
+    "link": {
       "type": "component",
       "repeatable": false,
       "component": "layout.link"

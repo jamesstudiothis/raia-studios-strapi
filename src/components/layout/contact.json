@@ -7,10 +7,10 @@
   },
   "options": {},
   "attributes": {
-    "DividerText": {
+    "dividerText": {
       "type": "string"
     },
-    "PrimaryText": {
+    "primaryText": {
       "type": "text"
     },
     "contactSection": {

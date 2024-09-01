@@ -7,16 +7,16 @@
   },
   "options": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "SecondaryTitle": {
+    "secondaryTitle": {
       "type": "string"
     },
-    "URL": {
+    "url": {
       "type": "string"
     },
-    "Thumbnail": {
+    "thumbnail": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -27,7 +27,7 @@
         "audios"
       ]
     },
-    "videoURL": {
+    "videoUrl": {
       "type": "string"
     },
     "playState": {
