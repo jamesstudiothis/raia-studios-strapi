@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "Video": {
+    "video": {
       "type": "component",
       "repeatable": true,
       "component": "layout.video"

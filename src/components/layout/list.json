@@ -1,9 +1,8 @@
 {
-  "collectionName": "components_layout_capabilities",
+  "collectionName": "components_layout_lists",
   "info": {
-    "displayName": "Capabilities",
-    "icon": "monitor",
-    "description": ""
+    "displayName": "List",
+    "icon": "bulletList"
   },
   "options": {},
   "attributes": {

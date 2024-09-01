@@ -12,14 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Slug": {
+    "slug": {
       "type": "uid",
-      "targetField": "Title"
+      "targetField": "title"
     },
-    "Content": {
+    "content": {
       "type": "dynamiczone",
       "components": [
         "layout.video",
@@ -28,14 +28,14 @@
         "layout.hero",
         "layout.headline-text",
         "layout.contact",
-        "layout.capabilities",
         "layout.body-text",
         "layout.slider",
         "layout.large-body-text",
-        "layout.work"
+        "layout.work",
+        "layout.list"
       ]
     },
-    "SEO": {
+    "seo": {
       "type": "component",
       "repeatable": false,
       "component": "seo.seo-information"

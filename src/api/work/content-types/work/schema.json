@@ -63,7 +63,7 @@
       "relation": "oneToMany",
       "target": "api::tag.tag"
     },
-    "SEO": {
+    "seo": {
       "displayName": "SEO Information",
       "type": "component",
       "repeatable": false,

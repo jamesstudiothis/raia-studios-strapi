@@ -62,35 +62,7 @@ export interface LayoutVideoCarousel extends Schema.Component {
     icon: 'grid';
   };
   attributes: {
-    Video: Attribute.Component<'layout.video', true>;
-  };
-}
-
-export interface LayoutTeam extends Schema.Component {
-  collectionName: 'components_layout_teams';
-  info: {
-    displayName: 'Team';
-    icon: 'user';
-  };
-  attributes: {
-    DividerText: Attribute.String;
-    Headline: Attribute.String;
-    TitleText: Attribute.String;
-    Team: Attribute.Component<'layout.team-members', true>;
-  };
-}
-
-export interface LayoutTeamMembers extends Schema.Component {
-  collectionName: 'components_layout_team_members';
-  info: {
-    displayName: 'Team Members';
-    icon: 'user';
-    description: '';
-  };
-  attributes: {
-    Name: Attribute.String;
-    Title: Attribute.String;
-    Link: Attribute.Component<'layout.link'>;
+    video: Attribute.Component<'layout.video', true>;
   };
 }
 
@@ -121,6 +93,18 @@ export interface LayoutSliderVideo extends Schema.Component {
     videoUrl: Attribute.String;
     playState: Attribute.Enumeration<['Autoplay', 'On Hover', 'Not Play']> &
       Attribute.DefaultTo<'Autoplay'>;
+  };
+}
+
+export interface LayoutList extends Schema.Component {
+  collectionName: 'components_layout_lists';
+  info: {
+    displayName: 'List';
+    icon: 'bulletList';
+  };
+  attributes: {
+    dividerText: Attribute.String;
+    link: Attribute.Component<'layout.link', true>;
   };
 }
 
@@ -226,19 +210,6 @@ export interface LayoutContactItem extends Schema.Component {
   };
 }
 
-export interface LayoutCapabilities extends Schema.Component {
-  collectionName: 'components_layout_capabilities';
-  info: {
-    displayName: 'Capabilities';
-    icon: 'monitor';
-    description: '';
-  };
-  attributes: {
-    dividerText: Attribute.String;
-    link: Attribute.Component<'layout.link', true>;
-  };
-}
-
 export interface LayoutBodyText extends Schema.Component {
   collectionName: 'components_body_text_body_texts';
   info: {
@@ -303,10 +274,9 @@ declare module '@strapi/types' {
       'layout.work-section': LayoutWorkSection;
       'layout.video': LayoutVideo;
       'layout.video-carousel': LayoutVideoCarousel;
-      'layout.team': LayoutTeam;
-      'layout.team-members': LayoutTeamMembers;
       'layout.slider': LayoutSlider;
       'layout.slider-video': LayoutSliderVideo;
+      'layout.list': LayoutList;
       'layout.link': LayoutLink;
       'layout.large-body-text': LayoutLargeBodyText;
       'layout.hero': LayoutHero;
@@ -315,7 +285,6 @@ declare module '@strapi/types' {
       'layout.contact': LayoutContact;
       'layout.contact-section': LayoutContactSection;
       'layout.contact-item': LayoutContactItem;
-      'layout.capabilities': LayoutCapabilities;
       'layout.body-text': LayoutBodyText;
       'layout.accordion': LayoutAccordion;
       'layout.accordion-item': LayoutAccordionItem;

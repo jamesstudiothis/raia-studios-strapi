@@ -858,9 +858,9 @@ export interface ApiPagePage extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String;
-    Slug: Attribute.UID<'api::page.page', 'Title'>;
-    Content: Attribute.DynamicZone<
+    title: Attribute.String;
+    slug: Attribute.UID<'api::page.page', 'title'>;
+    content: Attribute.DynamicZone<
       [
         'layout.video',
         'layout.video-carousel',
@@ -868,14 +868,14 @@ export interface ApiPagePage extends Schema.CollectionType {
         'layout.hero',
         'layout.headline-text',
         'layout.contact',
-        'layout.capabilities',
         'layout.body-text',
         'layout.slider',
         'layout.large-body-text',
-        'layout.work'
+        'layout.work',
+        'layout.list'
       ]
     >;
-    SEO: Attribute.Component<'seo.seo-information'>;
+    seo: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -920,8 +920,8 @@ export interface ApiServiceService extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String & Attribute.Required & Attribute.Unique;
-    slug: Attribute.UID<'api::service.service', 'name'> & Attribute.Required;
+    title: Attribute.String & Attribute.Required & Attribute.Unique;
+    slug: Attribute.UID<'api::service.service', 'title'> & Attribute.Required;
     content: Attribute.DynamicZone<
       [
         'layout.hero',
@@ -994,8 +994,8 @@ export interface ApiTagTag extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Title: Attribute.String & Attribute.Required;
-    Slug: Attribute.UID<'api::tag.tag', 'Title'> & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::tag.tag', 'title'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1037,7 +1037,7 @@ export interface ApiWorkWork extends Schema.CollectionType {
       'api::service.service'
     >;
     tags: Attribute.Relation<'api::work.work', 'oneToMany', 'api::tag.tag'>;
-    SEO: Attribute.Component<'seo.seo-information'>;
+    seo: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
