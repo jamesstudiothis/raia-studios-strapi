@@ -155,6 +155,8 @@ export interface LayoutHeadlineText extends Schema.Component {
   attributes: {
     dividerText: Attribute.String;
     text: Attribute.Text;
+    textSize: Attribute.Enumeration<['Small', 'Medium', 'Large']> &
+      Attribute.DefaultTo<'Large'>;
   };
 }
 
@@ -220,9 +222,9 @@ export interface LayoutBodyText extends Schema.Component {
   attributes: {
     dividerText: Attribute.String;
     headingText: Attribute.Text;
-    primaryText: Attribute.Text;
-    link: Attribute.Component<'layout.link'>;
+    primaryText: Attribute.Text & Attribute.Required;
     video: Attribute.Component<'layout.video'>;
+    link: Attribute.Component<'layout.link'>;
   };
 }
 

@@ -12,6 +12,15 @@
     },
     "text": {
       "type": "text"
+    },
+    "textSize": {
+      "type": "enumeration",
+      "enum": [
+        "Small",
+        "Medium",
+        "Large"
+      ],
+      "default": "Large"
     }
   }
 }

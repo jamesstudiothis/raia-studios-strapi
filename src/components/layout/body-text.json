@@ -14,17 +14,18 @@
       "type": "text"
     },
     "primaryText": {
-      "type": "text"
-    },
-    "link": {
-      "type": "component",
-      "repeatable": false,
-      "component": "layout.link"
+      "type": "text",
+      "required": true
     },
     "video": {
       "type": "component",
       "repeatable": false,
       "component": "layout.video"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.link"
     }
   }
 }
