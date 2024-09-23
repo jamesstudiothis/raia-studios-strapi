@@ -2,14 +2,16 @@
   "collectionName": "components_layout_video_carousels",
   "info": {
     "displayName": "Video Carousel",
-    "icon": "grid"
+    "icon": "grid",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "video": {
       "type": "component",
       "repeatable": true,
-      "component": "layout.video"
+      "component": "layout.video",
+      "required": true
     }
   }
 }

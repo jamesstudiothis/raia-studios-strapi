@@ -2,12 +2,14 @@
   "collectionName": "components_layout_heroes",
   "info": {
     "displayName": "Hero",
-    "icon": "bold"
+    "icon": "bold",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "heroText": {
-      "type": "text"
+      "type": "text",
+      "required": true
     }
   }
 }

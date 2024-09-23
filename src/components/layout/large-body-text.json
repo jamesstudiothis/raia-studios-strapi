@@ -11,7 +11,8 @@
       "type": "string"
     },
     "primaryText": {
-      "type": "text"
+      "type": "text",
+      "required": true
     }
   }
 }

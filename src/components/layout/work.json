@@ -10,7 +10,8 @@
     "work": {
       "type": "component",
       "repeatable": true,
-      "component": "layout.work-section"
+      "component": "layout.work-section",
+      "required": true
     }
   }
 }

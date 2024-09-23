@@ -20,7 +20,7 @@ export interface LayoutWork extends Schema.Component {
     description: '';
   };
   attributes: {
-    work: Attribute.Component<'layout.work-section', true>;
+    work: Attribute.Component<'layout.work-section', true> & Attribute.Required;
   };
 }
 
@@ -60,9 +60,10 @@ export interface LayoutVideoCarousel extends Schema.Component {
   info: {
     displayName: 'Video Carousel';
     icon: 'grid';
+    description: '';
   };
   attributes: {
-    video: Attribute.Component<'layout.video', true>;
+    video: Attribute.Component<'layout.video', true> & Attribute.Required;
   };
 }
 
@@ -88,7 +89,7 @@ export interface LayoutSliderVideo extends Schema.Component {
   attributes: {
     title: Attribute.String;
     secondaryTitle: Attribute.String;
-    url: Attribute.String;
+    url: Attribute.String & Attribute.Required;
     thumbnail: Attribute.Media<'images'>;
     videoUrl: Attribute.String;
     playState: Attribute.Enumeration<['Autoplay', 'On Hover', 'Not Play']> &
@@ -101,10 +102,11 @@ export interface LayoutList extends Schema.Component {
   info: {
     displayName: 'List';
     icon: 'bulletList';
+    description: '';
   };
   attributes: {
     dividerText: Attribute.String;
-    link: Attribute.Component<'layout.link', true>;
+    link: Attribute.Component<'layout.link', true> & Attribute.Required;
   };
 }
 
@@ -130,7 +132,7 @@ export interface LayoutLargeBodyText extends Schema.Component {
   };
   attributes: {
     dividerText: Attribute.String;
-    primaryText: Attribute.Text;
+    primaryText: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -139,9 +141,10 @@ export interface LayoutHero extends Schema.Component {
   info: {
     displayName: 'Hero';
     icon: 'bold';
+    description: '';
   };
   attributes: {
-    heroText: Attribute.Text;
+    heroText: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -154,7 +157,7 @@ export interface LayoutHeadlineText extends Schema.Component {
   };
   attributes: {
     dividerText: Attribute.String;
-    text: Attribute.Text;
+    text: Attribute.Text & Attribute.Required;
     textSize: Attribute.Enumeration<['Small', 'Medium', 'Large']> &
       Attribute.DefaultTo<'Large'>;
   };
