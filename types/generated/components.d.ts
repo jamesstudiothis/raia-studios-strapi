@@ -8,7 +8,7 @@ export interface SeoSeoTag extends Schema.Component {
     description: '';
   };
   attributes: {
-    type: Attribute.String;
+    type: Attribute.Enumeration<['Name', 'Property']>;
     name: Attribute.String;
     content: Attribute.String;
   };
