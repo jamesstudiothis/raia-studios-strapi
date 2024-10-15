@@ -965,6 +965,7 @@ export interface ApiSiteOptionSiteOption extends Schema.SingleType {
   attributes: {
     screensaver: Attribute.Boolean & Attribute.DefaultTo<true>;
     screensaverUrl: Attribute.String;
+    siteGuide: Attribute.Text & Attribute.Private;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

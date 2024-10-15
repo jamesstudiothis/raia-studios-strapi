@@ -1,15 +1,40 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface SeoSeoTag extends Schema.Component {
+  collectionName: 'components_seo_seo_tags';
+  info: {
+    displayName: 'seoTag';
+    icon: 'code';
+    description: '';
+  };
+  attributes: {
+    type: Attribute.String;
+    name: Attribute.String;
+    content: Attribute.String;
+  };
+}
+
 export interface SeoSeoInformation extends Schema.Component {
   collectionName: 'components_seo_seo_informations';
   info: {
     displayName: 'SEO Information';
     icon: 'search';
+    description: '';
   };
   attributes: {
     seoTitle: Attribute.String;
     seoDescription: Attribute.Text;
+    seoTag: Attribute.Component<'seo.seo-tag', true>;
   };
+}
+
+export interface SeoMetaTag extends Schema.Component {
+  collectionName: 'components_seo_meta_tags';
+  info: {
+    displayName: 'metaTag';
+    icon: 'code';
+  };
+  attributes: {};
 }
 
 export interface LayoutWork extends Schema.Component {
@@ -89,9 +114,9 @@ export interface LayoutSliderVideo extends Schema.Component {
   attributes: {
     title: Attribute.String;
     secondaryTitle: Attribute.String;
-    url: Attribute.String & Attribute.Required;
+    url: Attribute.String;
     thumbnail: Attribute.Media<'images'>;
-    videoUrl: Attribute.String;
+    videoUrl: Attribute.String & Attribute.Required;
     playState: Attribute.Enumeration<['Autoplay', 'On Hover', 'Not Play']> &
       Attribute.DefaultTo<'Autoplay'>;
   };
@@ -274,7 +299,9 @@ export interface FooterColumn extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'seo.seo-tag': SeoSeoTag;
       'seo.seo-information': SeoSeoInformation;
+      'seo.meta-tag': SeoMetaTag;
       'layout.work': LayoutWork;
       'layout.work-section': LayoutWorkSection;
       'layout.video': LayoutVideo;

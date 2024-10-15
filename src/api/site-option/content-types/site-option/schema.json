@@ -18,6 +18,10 @@
     },
     "screensaverUrl": {
       "type": "string"
+    },
+    "siteGuide": {
+      "type": "text",
+      "private": true
     }
   }
 }
