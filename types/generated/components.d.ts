@@ -101,6 +101,7 @@ export interface LayoutSlider extends Schema.Component {
   };
   attributes: {
     slide: Attribute.Component<'layout.slider-video', true>;
+    sliderSpeed: Attribute.String & Attribute.DefaultTo<'1'>;
   };
 }
 
