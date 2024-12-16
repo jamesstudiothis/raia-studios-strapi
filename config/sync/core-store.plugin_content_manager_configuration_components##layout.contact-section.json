@@ -1,0 +1,78 @@
+{
+  "key": "plugin_content_manager_configuration_components::layout.contact-section",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "headingText",
+      "defaultSortBy": "headingText",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "headingText": {
+        "edit": {
+          "label": "headingText",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "headingText",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "contactItem": {
+        "edit": {
+          "label": "contactItem",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "contactItem",
+          "searchable": false,
+          "sortable": false
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "headingText",
+        "contactItem"
+      ],
+      "edit": [
+        [
+          {
+            "name": "headingText",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "contactItem",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "layout.contact-section",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

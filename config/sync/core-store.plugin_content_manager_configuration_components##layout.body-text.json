@@ -1,0 +1,137 @@
+{
+  "key": "plugin_content_manager_configuration_components::layout.body-text",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "dividerText",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "dividerText": {
+        "edit": {
+          "label": "dividerText",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "dividerText",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "headingText": {
+        "edit": {
+          "label": "headingText",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "headingText",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "primaryText": {
+        "edit": {
+          "label": "primaryText",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "primaryText",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "video": {
+        "edit": {
+          "label": "video",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "video",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "link": {
+        "edit": {
+          "label": "link",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "link",
+          "searchable": false,
+          "sortable": false
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "dividerText",
+        "headingText",
+        "primaryText"
+      ],
+      "edit": [
+        [
+          {
+            "name": "dividerText",
+            "size": 6
+          },
+          {
+            "name": "headingText",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "primaryText",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "video",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "link",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "layout.body-text",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

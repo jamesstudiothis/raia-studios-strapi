@@ -1,0 +1,77 @@
+{
+  "key": "plugin_content_manager_configuration_components::layout.work-section",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "dividerText",
+      "defaultSortBy": "dividerText",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "dividerText": {
+        "edit": {
+          "label": "dividerText",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "dividerText",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "works": {
+        "edit": {
+          "label": "works",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "title"
+        },
+        "list": {
+          "label": "works",
+          "searchable": false,
+          "sortable": false
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "dividerText",
+        "works"
+      ],
+      "edit": [
+        [
+          {
+            "name": "dividerText",
+            "size": 6
+          },
+          {
+            "name": "works",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "layout.work-section",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

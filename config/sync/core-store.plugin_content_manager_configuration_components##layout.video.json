@@ -1,0 +1,76 @@
+{
+  "key": "plugin_content_manager_configuration_components::layout.video",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "videoUrl",
+      "defaultSortBy": "videoUrl",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "videoUrl": {
+        "edit": {
+          "label": "videoUrl",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "videoUrl",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "playState": {
+        "edit": {
+          "label": "playState",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "playState",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "videoUrl",
+        "playState"
+      ],
+      "edit": [
+        [
+          {
+            "name": "videoUrl",
+            "size": 6
+          },
+          {
+            "name": "playState",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "layout.video",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

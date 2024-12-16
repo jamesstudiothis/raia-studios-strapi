@@ -1,0 +1,97 @@
+{
+  "key": "plugin_content_manager_configuration_components::layout.contact",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "dividerText",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "dividerText": {
+        "edit": {
+          "label": "dividerText",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "dividerText",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "primaryText": {
+        "edit": {
+          "label": "primaryText",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "primaryText",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "contactSection": {
+        "edit": {
+          "label": "contactSection",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "contactSection",
+          "searchable": false,
+          "sortable": false
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "dividerText",
+        "primaryText",
+        "contactSection"
+      ],
+      "edit": [
+        [
+          {
+            "name": "dividerText",
+            "size": 6
+          },
+          {
+            "name": "primaryText",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "contactSection",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "layout.contact",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

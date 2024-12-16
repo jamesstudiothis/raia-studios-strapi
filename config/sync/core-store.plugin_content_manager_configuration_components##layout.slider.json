@@ -1,0 +1,78 @@
+{
+  "key": "plugin_content_manager_configuration_components::layout.slider",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "sliderSpeed",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "slide": {
+        "edit": {
+          "label": "slide",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "slide",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "sliderSpeed": {
+        "edit": {
+          "label": "sliderSpeed",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "sliderSpeed",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "slide",
+        "sliderSpeed"
+      ],
+      "edit": [
+        [
+          {
+            "name": "slide",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "sliderSpeed",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "layout.slider",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
