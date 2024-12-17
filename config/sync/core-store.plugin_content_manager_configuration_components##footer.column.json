@@ -21,7 +21,7 @@
       },
       "headingText": {
         "edit": {
-          "label": "headingText",
+          "label": "Heading",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -35,7 +35,7 @@
       },
       "link": {
         "edit": {
-          "label": "link",
+          "label": "Link",
           "description": "",
           "placeholder": "",
           "visible": true,

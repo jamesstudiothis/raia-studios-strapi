@@ -21,7 +21,7 @@
       },
       "videoUrl": {
         "edit": {
-          "label": "videoUrl",
+          "label": "Video Url",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -35,7 +35,7 @@
       },
       "playState": {
         "edit": {
-          "label": "playState",
+          "label": "Play State",
           "description": "",
           "placeholder": "",
           "visible": true,

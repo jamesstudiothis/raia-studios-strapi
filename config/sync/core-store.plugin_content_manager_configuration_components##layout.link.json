@@ -21,7 +21,7 @@
       },
       "label": {
         "edit": {
-          "label": "label",
+          "label": "Label",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -35,7 +35,7 @@
       },
       "url": {
         "edit": {
-          "label": "url",
+          "label": "URL",
           "description": "Begin with a '/' for internal links.",
           "placeholder": "/",
           "visible": true,

@@ -21,8 +21,8 @@
       },
       "dividerText": {
         "edit": {
-          "label": "dividerText",
-          "description": "",
+          "label": "Divider Text",
+          "description": "Leave blank to remove hairline. Add a space to include hairline only.",
           "placeholder": "",
           "visible": true,
           "editable": true
@@ -35,7 +35,7 @@
       },
       "works": {
         "edit": {
-          "label": "works",
+          "label": "Work",
           "description": "",
           "placeholder": "",
           "visible": true,

@@ -21,7 +21,7 @@
       },
       "video": {
         "edit": {
-          "label": "video",
+          "label": "Video",
           "description": "",
           "placeholder": "",
           "visible": true,

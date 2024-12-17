@@ -21,7 +21,7 @@
       },
       "seoTitle": {
         "edit": {
-          "label": "seoTitle",
+          "label": "Meta Title",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -35,7 +35,7 @@
       },
       "seoDescription": {
         "edit": {
-          "label": "seoDescription",
+          "label": "Meta Description",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -49,7 +49,7 @@
       },
       "seoTag": {
         "edit": {
-          "label": "seoTag",
+          "label": "Meta Tag",
           "description": "",
           "placeholder": "",
           "visible": true,

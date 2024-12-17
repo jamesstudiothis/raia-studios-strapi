@@ -21,7 +21,7 @@
       },
       "credit": {
         "edit": {
-          "label": "credit",
+          "label": "Credit",
           "description": "",
           "placeholder": "",
           "visible": true,

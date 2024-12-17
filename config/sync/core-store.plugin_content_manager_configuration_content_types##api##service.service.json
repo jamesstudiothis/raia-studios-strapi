@@ -21,7 +21,7 @@
       },
       "title": {
         "edit": {
-          "label": "title",
+          "label": "Title",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -35,7 +35,7 @@
       },
       "slug": {
         "edit": {
-          "label": "slug",
+          "label": "Slug",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -49,7 +49,7 @@
       },
       "content": {
         "edit": {
-          "label": "content",
+          "label": "Content",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -63,7 +63,7 @@
       },
       "seo": {
         "edit": {
-          "label": "seo",
+          "label": "SEO",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -135,12 +135,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "createdAt",
-        "updatedAt",
-        "title"
-      ],
       "edit": [
         [
           {
@@ -164,6 +158,12 @@
             "size": 12
           }
         ]
+      ],
+      "list": [
+        "id",
+        "createdAt",
+        "updatedAt",
+        "title"
       ]
     },
     "uid": "api::service.service"

@@ -6,7 +6,7 @@
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "sliderSpeed",
+      "mainField": "id",
       "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
@@ -21,7 +21,7 @@
       },
       "slide": {
         "edit": {
-          "label": "slide",
+          "label": "Slide",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -32,39 +32,18 @@
           "searchable": false,
           "sortable": false
         }
-      },
-      "sliderSpeed": {
-        "edit": {
-          "label": "sliderSpeed",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "sliderSpeed",
-          "searchable": true,
-          "sortable": true
-        }
       }
     },
     "layouts": {
       "list": [
         "id",
-        "slide",
-        "sliderSpeed"
+        "slide"
       ],
       "edit": [
         [
           {
             "name": "slide",
             "size": 12
-          }
-        ],
-        [
-          {
-            "name": "sliderSpeed",
-            "size": 6
           }
         ]
       ]

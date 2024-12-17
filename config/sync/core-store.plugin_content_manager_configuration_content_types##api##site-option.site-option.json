@@ -21,7 +21,7 @@
       },
       "screensaver": {
         "edit": {
-          "label": "screensaver",
+          "label": "Use Screensaver",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -35,7 +35,7 @@
       },
       "screensaverUrl": {
         "edit": {
-          "label": "screensaverUrl",
+          "label": "Video URL",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -49,9 +49,9 @@
       },
       "siteGuide": {
         "edit": {
-          "label": "siteGuide",
+          "label": "Site Guide",
           "description": "",
-          "placeholder": "",
+          "placeholder": "1. Begin links with '/' to create internal links. External links will be opened in a new window. 2. Divider Text works with 3 settings; leave blank to remove hairline completely, add a space ' ' to include hairline only, add text you wish to be used as the headline.",
           "visible": true,
           "editable": false
         },
