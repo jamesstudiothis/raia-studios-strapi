@@ -11,12 +11,6 @@
       "type": "component",
       "repeatable": true,
       "component": "layout.slider-video"
-    },
-    "sliderSpeed": {
-      "type": "string",
-      "default": "1",
-      "required": false,
-      "regex": "^(-?(0|[1-9][0-9]*)(\\.[0-9]+)?)$"
     }
   }
 }
