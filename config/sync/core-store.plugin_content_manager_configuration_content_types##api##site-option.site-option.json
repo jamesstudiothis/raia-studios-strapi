@@ -51,9 +51,9 @@
         "edit": {
           "label": "Site Guide",
           "description": "",
-          "placeholder": "1. Begin links with '/' to create internal links. External links will be opened in a new window. 2. Divider Text works with 3 settings; leave blank to remove hairline completely, add a space ' ' to include hairline only, add text you wish to be used as the headline.",
+          "placeholder": "1. Homepage name must be set to 'Homepage'.   2. Divider Text fields can input several options:  — '' no space to remove hairline altogether,  — ' ' space to show just hairline,  — 'Placeholder Lorem Ipsum' text to show text and hairline.  3. If links do not feature a relative path and start with a '/' e.g. '/about', then they will open in an external tab with 'target=\"_blank\"'.",
           "visible": true,
-          "editable": false
+          "editable": true
         },
         "list": {
           "label": "siteGuide",
