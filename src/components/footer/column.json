@@ -7,9 +7,6 @@
   },
   "options": {},
   "attributes": {
-    "headingText": {
-      "type": "string"
-    },
     "link": {
       "type": "component",
       "repeatable": true,

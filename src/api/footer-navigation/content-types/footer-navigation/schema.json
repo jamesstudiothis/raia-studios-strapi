@@ -4,7 +4,8 @@
   "info": {
     "singularName": "footer-navigation",
     "pluralName": "footer-navigations",
-    "displayName": "Footer Navigation"
+    "displayName": "Footer Navigation",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false

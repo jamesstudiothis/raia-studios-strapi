@@ -17,11 +17,6 @@
       "type": "text",
       "required": true
     },
-    "video": {
-      "type": "component",
-      "repeatable": false,
-      "component": "layout.video"
-    },
     "link": {
       "type": "component",
       "repeatable": false,

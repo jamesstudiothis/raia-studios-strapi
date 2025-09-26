@@ -10,15 +10,6 @@
     "videoUrl": {
       "type": "string",
       "required": true
-    },
-    "playState": {
-      "type": "enumeration",
-      "enum": [
-        "Autoplay",
-        "On Hover",
-        "Not Play"
-      ],
-      "default": "Autoplay"
     }
   }
 }

@@ -75,8 +75,6 @@ export interface LayoutVideo extends Schema.Component {
   };
   attributes: {
     videoUrl: Attribute.String & Attribute.Required;
-    playState: Attribute.Enumeration<['Autoplay', 'On Hover', 'Not Play']> &
-      Attribute.DefaultTo<'Autoplay'>;
   };
 }
 
@@ -251,7 +249,6 @@ export interface LayoutBodyText extends Schema.Component {
     dividerText: Attribute.String;
     headingText: Attribute.Text;
     primaryText: Attribute.Text & Attribute.Required;
-    video: Attribute.Component<'layout.video'>;
     link: Attribute.Component<'layout.link'>;
   };
 }
@@ -291,7 +288,6 @@ export interface FooterColumn extends Schema.Component {
     description: '';
   };
   attributes: {
-    headingText: Attribute.String;
     link: Attribute.Component<'layout.link', true>;
   };
 }

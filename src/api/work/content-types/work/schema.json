@@ -10,7 +10,7 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {} ,
+  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string",
@@ -26,17 +26,6 @@
       "type": "string"
     },
     "year": {
-      "type": "string"
-    },
-    "thumbnail": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "thumbnailUrl": {
       "type": "string"
     },
     "workUrl": {

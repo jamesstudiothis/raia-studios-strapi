@@ -794,6 +794,7 @@ export interface ApiFooterNavigationFooterNavigation extends Schema.SingleType {
     singularName: 'footer-navigation';
     pluralName: 'footer-navigations';
     displayName: 'Footer Navigation';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1027,8 +1028,6 @@ export interface ApiWorkWork extends Schema.CollectionType {
     slug: Attribute.UID<'api::work.work', 'title'> & Attribute.Required;
     creator: Attribute.String;
     year: Attribute.String;
-    thumbnail: Attribute.Media<'images'>;
-    thumbnailUrl: Attribute.String;
     workUrl: Attribute.Component<'layout.video'>;
     about: Attribute.Text;
     credit: Attribute.Component<'layout.credits', true>;
