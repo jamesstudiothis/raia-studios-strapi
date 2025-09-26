@@ -864,16 +864,15 @@ export interface ApiPagePage extends Schema.CollectionType {
     content: Attribute.DynamicZone<
       [
         'layout.video',
-        'layout.video-carousel',
         'layout.accordion',
         'layout.hero',
         'layout.headline-text',
         'layout.contact',
         'layout.body-text',
-        'layout.slider',
         'layout.large-body-text',
         'layout.work',
-        'layout.list'
+        'layout.list',
+        'layout.fullscreen-slider'
       ]
     >;
     seo: Attribute.Component<'seo.seo-information'>;
@@ -923,17 +922,6 @@ export interface ApiServiceService extends Schema.CollectionType {
   attributes: {
     title: Attribute.String & Attribute.Required & Attribute.Unique;
     slug: Attribute.UID<'api::service.service', 'title'> & Attribute.Required;
-    content: Attribute.DynamicZone<
-      [
-        'layout.hero',
-        'layout.body-text',
-        'layout.video-carousel',
-        'layout.video',
-        'layout.work',
-        'layout.headline-text'
-      ]
-    >;
-    seo: Attribute.Component<'seo.seo-information'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -21,22 +21,6 @@
       "type": "uid",
       "required": true,
       "targetField": "title"
-    },
-    "content": {
-      "type": "dynamiczone",
-      "components": [
-        "layout.hero",
-        "layout.body-text",
-        "layout.video-carousel",
-        "layout.video",
-        "layout.work",
-        "layout.headline-text"
-      ]
-    },
-    "seo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "seo.seo-information"
     }
   }
 }

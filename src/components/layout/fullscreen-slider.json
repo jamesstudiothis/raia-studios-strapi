@@ -1,12 +1,15 @@
 {
-  "collectionName": "components_layout_works",
+  "collectionName": "components_layout_fullscreen_sliders",
   "info": {
-    "displayName": "Work",
-    "icon": "play",
+    "displayName": "Fullscreen Slider",
+    "icon": "expand",
     "description": ""
   },
   "options": {},
   "attributes": {
+    "primaryText": {
+      "type": "text"
+    },
     "works": {
       "type": "relation",
       "relation": "oneToMany",

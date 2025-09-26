@@ -23,16 +23,15 @@
       "type": "dynamiczone",
       "components": [
         "layout.video",
-        "layout.video-carousel",
         "layout.accordion",
         "layout.hero",
         "layout.headline-text",
         "layout.contact",
         "layout.body-text",
-        "layout.slider",
         "layout.large-body-text",
         "layout.work",
-        "layout.list"
+        "layout.list",
+        "layout.fullscreen-slider"
       ]
     },
     "seo": {

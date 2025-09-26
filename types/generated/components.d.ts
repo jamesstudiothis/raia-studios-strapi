@@ -45,7 +45,7 @@ export interface LayoutWork extends Schema.Component {
     description: '';
   };
   attributes: {
-    work: Attribute.Component<'layout.work-section', true> & Attribute.Required;
+    works: Attribute.Relation<'layout.work', 'oneToMany', 'api::work.work'>;
   };
 }
 
@@ -186,6 +186,23 @@ export interface LayoutHeadlineText extends Schema.Component {
   };
 }
 
+export interface LayoutFullscreenSlider extends Schema.Component {
+  collectionName: 'components_layout_fullscreen_sliders';
+  info: {
+    displayName: 'Fullscreen Slider';
+    icon: 'expand';
+    description: '';
+  };
+  attributes: {
+    primaryText: Attribute.Text;
+    works: Attribute.Relation<
+      'layout.fullscreen-slider',
+      'oneToMany',
+      'api::work.work'
+    >;
+  };
+}
+
 export interface LayoutCredits extends Schema.Component {
   collectionName: 'components_layout_credits';
   info: {
@@ -309,6 +326,7 @@ declare module '@strapi/types' {
       'layout.large-body-text': LayoutLargeBodyText;
       'layout.hero': LayoutHero;
       'layout.headline-text': LayoutHeadlineText;
+      'layout.fullscreen-slider': LayoutFullscreenSlider;
       'layout.credits': LayoutCredits;
       'layout.contact': LayoutContact;
       'layout.contact-section': LayoutContactSection;
